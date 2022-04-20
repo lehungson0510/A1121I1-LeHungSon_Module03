@@ -6,7 +6,7 @@ use my_database;
 
 -- tao bang
 create table if not exists student(
-`id` int,
+`id` int primary key auto_increment,
 `name` varchar(100),
 `birthday` date,
 `where` varchar(200)
@@ -33,7 +33,7 @@ set sql_safe_updates =0;
 update student set `name` ="son3", `point` = 3 where id = 1;
 update student set `point` = 10 where id = 2;
 
--- xoa bang/xoa database
+-- xoa record
 delete from student;
 delete from student where id = 2;
 
