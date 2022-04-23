@@ -65,13 +65,4 @@ foreign key(ma_vtu) references vat_tu(ma_vtu),
 foreign key(so_dh) references don_dh(so_dh)
 );
 
-select *from phieu_xuat;
-select *from vat_tu;
-select *from phieu_nhap;
-select *from don_dh;
-select *from nha_cc;
-select *from chi_tiet_phieu_xuat;
-select *from chi_tiet_phieu_nhap;
-select *from chi_tiet_don_dat_hang;
-select *from sdt;
 -- drop database bai_tap_1;

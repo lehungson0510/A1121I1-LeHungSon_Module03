@@ -35,9 +35,4 @@ exam_times tinyint default 1,
 unique(sub_id, student_id)
 );
 
-select *from class;
-select *from student;
-select *from `subject`;
-select *from mark;
-
 -- drop database quan_li_sinh_vien;

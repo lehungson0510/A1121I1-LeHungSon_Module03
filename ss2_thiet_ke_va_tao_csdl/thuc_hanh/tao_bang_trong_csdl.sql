@@ -32,8 +32,4 @@ sdt varchar(10)
 alter table mon_hoc add ma_gv varchar(30);
 alter table mon_hoc add foreign key (ma_gv) references giao_vien(ma_gv);
 
-select *from hoc_sinh;
-select *from mon_hoc;
-select *from bang_diem;
-select *from giao_vien;
 -- drop database quan_li_diem_thi;
