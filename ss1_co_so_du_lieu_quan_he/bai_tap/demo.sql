@@ -42,7 +42,7 @@ drop table student;
 drop database my_database;
 
 -- them moi truong/cot cho bang
-alter table student add `point` int;
+alter table  student add  `point4`  int not null default 3 after birthday;
 
 
 

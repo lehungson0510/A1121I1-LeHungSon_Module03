@@ -41,9 +41,10 @@ dg_xuat double,
 sl_xuat int,
 so_px int,
 ma_vtu int,
-primary key(so_px , ma_vtu),
+primary key(so_px,ma_vtu),
 -- foreign key(so_px) references phieu_xuat(so_px) ,
-foreign key(ma_vtu)  references vat_tu(ma_vtu)
+foreign key(ma_vtu)  references vat_tu(ma_vtu),
+foreign key(so_px) references phieu_xuat(so_px)
 );
 
 create table chi_tiet_phieu_nhap(
@@ -73,5 +74,4 @@ select *from chi_tiet_phieu_xuat;
 select *from chi_tiet_phieu_nhap;
 select *from chi_tiet_don_dat_hang;
 select *from sdt;
-
 -- drop database bai_tap_1;

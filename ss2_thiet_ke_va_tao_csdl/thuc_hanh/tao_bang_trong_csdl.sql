@@ -15,8 +15,10 @@ ten_mh varchar(30)
 );
 
 create table if not exists bang_diem(
-ma_hs varchar(30) references hoc_sinh(ma_hs),
-ma_mh varchar(30) references hoc_sinh(ma_mh), 
+ma_hs varchar(30),
+foreign key(ma_hs) references hoc_sinh(ma_hs),
+ma_mh varchar(30),
+foreign key (ma_mh) references mon_hoc(ma_mh), 
 diem_thi int,
 primary key (ma_hs, ma_mh)
 );
@@ -34,4 +36,4 @@ select *from hoc_sinh;
 select *from mon_hoc;
 select *from bang_diem;
 select *from giao_vien;
-drop database quan_li_diem_thi;
+-- drop database quan_li_diem_thi;

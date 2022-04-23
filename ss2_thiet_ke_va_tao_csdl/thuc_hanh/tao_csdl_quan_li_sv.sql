@@ -13,7 +13,8 @@ student_name varchar(30) not null,
 address varchar(50) ,
 phone varchar(20) ,
 status bit,
-class_id int references class(class_id)
+class_id int,
+foreign key(class_id) references class(class_id)
 );
 
 create table `subject`(
@@ -25,8 +26,10 @@ status bit default 1
 
 create table mark(
 mark_id int not null primary key auto_increment,
-sub_id int not null references subject(sub_id),
-student_id int not null  references student(student_id),
+sub_id int not null,
+foreign key(sub_id) references subject(sub_id),
+student_id int not null,
+foreign key(student_id) references student(student_id),
 mark float default 0 check( mark between 0 and 100),
 exam_times tinyint default 1,
 unique(sub_id, student_id)
@@ -36,3 +39,5 @@ select *from class;
 select *from student;
 select *from `subject`;
 select *from mark;
+
+-- drop database quan_li_sinh_vien;
