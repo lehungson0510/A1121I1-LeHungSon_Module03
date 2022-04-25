@@ -25,7 +25,6 @@ ma_ncc int primary key,
 ten_ncc varchar(30),
 dia_chi varchar(30),
 id_sdt int,
---                           id_sdt int references sdt(id_sdt),: dùng khoá ngoại bằng cách này được không ta????
 foreign key(id_sdt) references sdt(id_sdt)
 );
 
