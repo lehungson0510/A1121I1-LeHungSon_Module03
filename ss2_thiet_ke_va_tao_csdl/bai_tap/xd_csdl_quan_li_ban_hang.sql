@@ -29,5 +29,4 @@ foreign key(o_id) references `order`(o_id),
 foreign key(p_id) references product(p_id)
 );
 
-
 -- drop database bt2;
