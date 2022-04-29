@@ -40,10 +40,16 @@ end;
 // delimiter ;
 call products();
 
-
 drop procedure products;
 
-
+delimiter //
+create procedure add_product( key_name varchar(50), out  ) 
+begin
+	insert into products (product_code,product_name,product_price,product_amount,product_description,product_status) values
+("g","fish",10000,5,"bad",1);
+end;
+// delimiter ;
+call add_products();
 
 
 
