@@ -10,7 +10,7 @@ where mark.mark >= ALL (SELECT mark.mark from mark);
 
 -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
 select student.* , avg(mark) from mark
-join student on student.student_id = mark.mark_id
+join student on student.student_id = mark.student_id
 group by student.student_name
 order by avg(mark);
 
