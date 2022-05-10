@@ -1,0 +1,83 @@
+#div1 {
+    font-weight: bold;
+    margin-top: 10px;
+    width: 12%;
+}
+
+h1 {
+    top: 0;
+    /*z-index: 1; để ẩn thông tin phía sau*/
+    z-index: 1;
+    position: sticky;
+    text-align: center;
+    background-color: orchid;
+}
+
+#gioithieutruyen {
+    position: absolute;
+    left: 470px;
+    top: 150px;
+}
+
+img {
+    width: 450px;
+    height: 700px;
+}
+
+span {
+    font-weight: bold;
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+div.noidungchuong1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 400px;
+    top: 980px;
+    margin-left: 15px;
+    position: absolute;
+}
+
+div.noidungchuong2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 400px;
+    position: absolute;
+    top: 980px;
+    left: 500px;
+}
+
+div.noidungchuong3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 400px;
+    position: absolute;
+    top: 980px;
+    right: 5px;
+}

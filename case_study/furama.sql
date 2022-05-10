@@ -50,6 +50,7 @@ dia_chi varchar(45),
 ma_vi_tri int,
 ma_trinh_do int,
 ma_bo_phan int,
+flag bit default 1,
 foreign key (ma_vi_tri) references vi_tri(ma_vi_tri),
 foreign key(ma_trinh_do) references trinh_do(ma_trinh_do),
 foreign key(ma_bo_phan) references bo_phan(ma_bo_phan)
@@ -84,6 +85,7 @@ so_cmnnd varchar(45),
 so_dien_thoai varchar(45),
 email varchar(45),
 dia_chi varchar(45),
+flag bit default 1,
 foreign key (ma_loai_khach) references loai_khach(ma_loai_khach)
 );
 insert into khach_hang(ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnnd,so_dien_thoai,email,dia_chi) values
@@ -145,6 +147,7 @@ tien_dat_coc double,
 ma_nhan_vien int,
 ma_khach_hang int,
 ma_dich_vu int,
+flag bit default 1,
 foreign key (ma_nhan_vien) references nhan_vien(ma_nhan_vien),
 constraint fk_hop_dong_khach_hang foreign key (ma_khach_hang) references khach_hang(ma_khach_hang),
 foreign key (ma_dich_vu) references dich_vu(ma_dich_vu)
@@ -409,17 +412,31 @@ having sum(dich_vu.chi_phi_thue+ifnull(hop_dong_chi_tiet.so_luong*dich_vu_di_kem
 ) as table_update
 );
 -- Câu 18: Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
+	-- Cách 1:
+    update khach_hang 
+    set flag = 0 
+    -- những khách hàng có flag = 0 thì xem như là bị xoá
+    where  khach_hang.ma_khach_hang in (select hop_dong.ma_khach_hang from hop_dong where year(hop_dong.ngay_lam_hop_dong) < 2021);
+
+	-- Cách 2:
 alter table hop_dong drop foreign key fk_hop_dong_khach_hang;
 	-- Thêm khoá ngoại này KHÔNG được do ở bảng hợp đồng có các khách hàng có mã là 1 , 3 , 4 nhưng ở bảng khách hàng không còn các khách hàng có mã này nữa.
 alter table hop_dong add constraint fk_hop_dong_khach_hang foreign key (ma_khach_hang) references khach_hang(ma_khach_hang);
 alter table hop_dong_chi_tiet drop foreign key fk_hdct_hop_dong;
 alter table hop_dong_chi_tiet add constraint fk_hdct_hop_dong  foreign key (ma_hop_dong) references hop_dong(ma_hop_dong);
-
 delete from khach_hang
 where khach_hang.ma_khach_hang in (select hop_dong.ma_khach_hang from hop_dong where year(hop_dong.ngay_lam_hop_dong) < 2021);
 
--- Câu 19: Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
+	-- Cách 3:
+    
+    -- Tắt ràng buộc khoá ngoại
+set foreign_key_checks = 0;
+delete from khach_hang
+where khach_hang.ma_khach_hang in (select hop_dong.ma_khach_hang from hop_dong where year(hop_dong.ngay_lam_hop_dong) < 2021);
 
+set foreign_key_checks = 1;
+-- Câu 19: Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
+	-- Cách 1:
 drop view if exists update_table_dvdk;
 create view update_table_dvdk as
 select hop_dong_chi_tiet.ma_dich_vu_di_kem, hop_dong_chi_tiet.so_luong as so_luong_dv_di_kem, hop_dong.ngay_lam_hop_dong 
@@ -435,6 +452,19 @@ update dich_vu_di_kem
 set dich_vu_di_kem.gia = dich_vu_di_kem.gia*2
 where dich_vu_di_kem.ma_dich_vu_di_kem in (select ma_dich_vu_di_kem from update_table_dvdk);
 
+	-- Cách 2:
+update dich_vu_di_kem
+set dich_vu_di_kem.gia = dich_vu_di_kem.gia*2
+where dich_vu_di_kem.ma_dich_vu_di_kem in (
+select *from (
+select hop_dong_chi_tiet.ma_dich_vu_di_kem
+from hop_dong_chi_tiet
+join hop_dong on hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
+where year(hop_dong.ngay_lam_hop_dong) = 2020
+group by hop_dong_chi_tiet.ma_dich_vu_di_kem
+having sum(hop_dong_chi_tiet.so_luong) > 10) as update_table
+);
+
 -- Câu 20: Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống, thông tin hiển thị bao gồm id (ma_nhan_vien, ma_khach_hang), ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi.
 select nhan_vien.ma_nhan_vien as "ma",nhan_vien.ho_ten as "ho_ten",nhan_vien.email,nhan_vien.so_dien_thoai,nhan_vien.ngay_sinh,nhan_vien.dia_chi,  "nhan vien" as vi_tri from nhan_vien
 group by nhan_vien.ma_nhan_vien
@@ -445,9 +475,9 @@ group by khach_hang.ma_khach_hang;
 -- Câu 21: Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “12/12/2019”.
 drop view if exists v_nhan_vien; 
 create view v_nhan_vien as 
-select *from nhan_vien
+select nhan_vien.* from nhan_vien
 join hop_dong on hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
-where nhan_vien.dia_chi like "%Đà nẵng%"  and  date(hop_dong.ngay_lam_hop_dong) = '2019-12-12'
+where nhan_vien.dia_chi like "%Đà Nẵng%" and hop_dong.ngay_lam_hop_dong = "2021-04-25"
 group by hop_dong.ma_nhan_vien
 having  count(hop_dong.ma_hop_dong) > 0 ;
 select *from v_nhan_vien;
@@ -458,23 +488,45 @@ set nhan_vien.dia_chi = "Liên Chiểu"
 where nhan_vien.ma_nhan_vien in (select v_nhan_vien.ma_nhan_vien from v_nhan_vien);
 
 -- Câu 23: Tạo Stored Procedure sp_xoa_khach_hang dùng để xóa thông tin của một khách hàng nào đó với ma_khach_hang được truyền vào như là 1 tham số của sp_xoa_khach_hang.
-drop procedure if exists sp_xoa_khach_hang
+	-- Cách 1: dùng flag = 0 để chỉ những khách hàng đã bị xoá
+drop procedure if exists sp_xoa_khach_hang;
 delimiter //
-create procedure sp_xoa_khach_hang (id_kh_delete int)
-begin 
-alter table hop_dong_chi_tiet drop foreign key fk_hdct_hop_dong;
-delete from khach_hang
-where khach_hang.ma_khach_hang = id_kh_delete;
-end;
-// delimiter ;
-call sp_xoa_khach_hang(2);
-alter table hop_dong_chi_tiet add constraint fk_hdct_hop_dong  foreign key (ma_hop_dong) references hop_dong(ma_hop_dong);
+create procedure sp_xoa_khach_hang 
+ (in ma_khach_hang_param int)
+ begin 
+ update khach_hang 
+ set flag = 0
+ where ma_khach_hang = ma_khach_hang_param;
+ end;
+ // delimiter ;
+ call sp_xoa_khach_hang(1);
+ alter table khach_hang 
+ add flag bit default 1;
+	-- update khach_hang 
+	--     set flag =1; để toàn bộ flag là 1 or để null vẫn được
+    
+	-- Cách 2:  set null foreign key
+
+drop procedure if exists sp_xoa_khach_hang_2;
+ delimiter //
+ create procedure sp_xoa_khach_hang_2
+ (in ma_khach_hang_param int)
+ begin 
+ update hop_dong 
+ set ma_khach_hang = null
+ where ma_khach_hang = ma_khach_hang_param;
+ delete from khach_hang
+ where ma_khach_hang = ma_khach_hang_param;
+ end
+ //delimiter ;
+ call sp_xoa_khach_hang_2(0);
+
 
 -- Câu 24: Tạo Stored Procedure sp_them_moi_hop_dong dùng để thêm mới vào bảng hop_dong với yêu cầu sp_them_moi_hop_dong phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung,
 	-- với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
-drop procedure if exists sp_them_moi_hop_dong
+drop procedure if exists sp_them_moi_hop_dong;
 delimiter //
-create procedure sp_them_moi_hop_dong (add_ngay_lam_hop_dong datetime,
+create procedure sp_them_moi_hop_dong (add_ma_hop_dong int,add_ngay_lam_hop_dong datetime,
 add_ngay_ket_thuc datetime,
 add_tien_dat_coc double,
 add_ma_nhan_vien int,
@@ -482,14 +534,61 @@ add_ma_khach_hang int,
 add_ma_dich_vu int
 )
 begin 
-alter table hop_dong add foreign key (ma_nhan_vien) references nhan_vien(ma_nhan_vien),
-add constraint fk_hop_dong_khach_hang foreign key (ma_khach_hang) references khach_hang(ma_khach_hang),
-add foreign key (ma_dich_vu) references dich_vu(ma_dich_vu);
-insert into hop_dong (ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc,ma_nhan_vien,ma_khach_hang,ma_dich_vu) 
-values (add_ngay_lam_hop_dong,add_ngay_ket_thuc,tien_dat_coc,add_ma_nhan_vien,add_ma_khach_hang,add_ma_dich_vu);
+ if add_ma_hop_dong in (select ma_hop_dong from hop_dong) 
+ then 
+ select 'ma_hop_dong không hợp lệ';
+ else 
+insert into hop_dong (ma_hop_dong,ngay_lam_hop_dong,ngay_ket_thuc,tien_dat_coc,ma_nhan_vien,ma_khach_hang,ma_dich_vu) 
+values (add_ma_hop_dong, add_ngay_lam_hop_dong,add_ngay_ket_thuc,add_tien_dat_coc,add_ma_nhan_vien,add_ma_khach_hang,add_ma_dich_vu);
+end if;
 end;
 // delimiter ;
-call sp_them_moi_hop_dong("2111-12-12","2111-12-12",4000,2000,20000,30000);
+call sp_them_moi_hop_dong(1,"2111-12-12","2111-12-12",3,1,1,1);
+
+-- procedure để xoá hợp đồng
+drop procedure if exists xoa_hop_dong;
+ delimiter //
+ create procedure xoa_hop_dong
+ (in ma_hop_dong_dele int)
+ begin 
+ if ma_hop_dong_dele not in (select ma_hop_dong from hop_dong) 
+ then 
+ select 'ma_hop_dong không tồn tại';
+ else
+ update hop_dong
+ set hop_dong.flag = 0
+ where ma_hop_dong = ma_hop_dong_dele;
+ end if;
+ end;
+ //delimiter ;
+ 
+ 
+ -- Câu 25: Tạo Trigger có tên tr_xoa_hop_dong khi xóa bản ghi trong bảng hop_dong thì hiển thị tổng số lượng bản ghi còn lại có trong bảng hop_dong ra giao diện console của database.
+	-- Lưu ý: Đối với MySQL thì sử dụng SIGNAL hoặc ghi log thay cho việc ghi ở console.
+
+drop table if exists check_so_luong;
+create table check_so_luong(so_luong int default 1);
+insert into check_so_luong values (0);
+select *from check_so_luong;
+
+drop trigger if exists tr_xoa_hop_dong;
+delimiter //
+create trigger tr_xoa_hop_dong
+after update
+on hop_dong
+for each row
+begin
+update check_so_luong set so_luong = (select count(hop_dong.ma_hop_dong) from hop_dong where hop_dong.flag = 1);
+end;
+// delimiter ;
+-- show triggers; 
+call xoa_hop_dong(12);
+select * from check_so_luong;
+
+-- Câu 26: Tạo Trigger có tên tr_cap_nhat_hop_dong khi cập nhật ngày kết thúc hợp đồng, cần kiểm tra xem thời gian cập nhật có phù hợp hay không, 
+	-- với quy tắc sau: Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày. Nếu dữ liệu hợp lệ thì cho phép cập nhật, nếu dữ liệu không hợp lệ thì in ra thông báo “Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày” trên console của database.
+	-- Lưu ý: Đối với MySQL thì sử dụng SIGNAL hoặc ghi log thay cho việc ghi ở console.
+
 
 
 
