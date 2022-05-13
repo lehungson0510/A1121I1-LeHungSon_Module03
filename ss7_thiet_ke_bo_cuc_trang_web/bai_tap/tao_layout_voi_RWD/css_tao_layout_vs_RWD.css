@@ -1,0 +1,82 @@
+.col-s-1 {width: 8.33333%;}
+.col-s-2 {width: 16.66667%;}
+.col-s-3 {width: 25%;}
+.col-s-4 {width: 33.33333%;}
+.col-s-5 {width: 41.66667%;}
+.col-s-6 {width: 50%;}
+.col-s-7 {width: 58.33333%;}
+.col-s-8 {width: 66.66667%;}
+.col-s-9 {width: 75%;}
+.col-s-10 {width: 83.33333%;}
+.col-s-11 {width: 91.66667%;}
+.col-s-12 {width: 100%;}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+.footer {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.left, .right{
+    text-align: center;
+    background-color: #CDCDCD;
+}
+
+div ul.one{
+  padding: 15px;
+    margin: 0;
+}
+.login{
+    padding-top: 15px;
+    float: left;
+}
+
+div ul.one li{
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+}
+div ul.two{
+    padding: 10px;
+    margin: 0;
+}
+div ul.two li  {
+    list-style: none;
+    line-height: 40px;
+}
+div ul.two li a {
+    text-decoration: none;
+}
+#welcome{
+    font-size: 40px;
+}
+#test{
+    font-size: 30px;
+}
+.test{
+    line-height: 30px;
+}
+.col-s-8 div{
+    padding: 20px 20px 275px 20px ;
+}
+.right li{
+    text-decoration: none;
+    border: solid 1px ;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+li:hover{
+    background-color: white;
+    color: black;
+}
+

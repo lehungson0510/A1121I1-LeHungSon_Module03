@@ -1,0 +1,88 @@
+input[type="text" i] {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.col-s-1 {width: 8.33333%;}
+.col-s-2 {width: 16.66667%;}
+.col-s-3 {width: 25%;}
+.col-s-4 {width: 33.33333%;}
+.col-s-5 {width: 41.66667%;}
+.col-s-6 {width: 50%;}
+.col-s-7 {width: 58.33333%;}
+.col-s-8 {width: 66.66667%;}
+.col-s-9 {width: 75%;}
+.col-s-10 {width: 83.33333%;}
+.col-s-11 {width: 91.66667%;}
+.col-s-12 {width: 100%;}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    height: 1000px;
+}
+.dow:hover .dow-list{
+    display: inline;
+}
+.dow{
+    position: relative;
+}
+#facebook {
+}
+.header{
+    height: 75px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: whitesmoke;
+}
+#tim-kiem{
+    height: 30px;
+    width: 210px;
+    border-radius: 15px;
+}
+.table-header{
+    vertical-align: center;
+    text-align: center;
+}
+.content-left{
+    /*background-color: #7abaff;*/
+    background-color: whitesmoke;
+    position: fixed;
+    font-size: 15px;
+}
+.content{
+    position: relative;
+    top: 75px;
+    margin: -7px;
+}
+.hover-header td:hover{
+    background-color: #cccaff;
+    color: #ff0202;
+    cursor: pointer;
+}
+.story-content td {
+    width: 25%;
+}
+.story-content td img{
+    border-radius: 15px;
+}
+#bottom-story{
+    width: 100%;
+}
+
+#bottom-story input{
+    border-radius: 15px;
+    width: 95%;
+    height: 30px;
+}
+.bottom-story{
+    /*background-color: #fcffe4;*/
+    background-color: #f3ffe1;
+}
+.margin-bottom-status{
+   text-align: right;
+}
+.content-main {
+    border-radius: 15%;
+    padding: 10px 0px;
+}
