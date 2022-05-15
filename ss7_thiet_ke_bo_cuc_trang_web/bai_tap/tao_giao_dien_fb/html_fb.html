@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 </head>
 <body>
+
+<!--+++++++++++++++++++++++++HEADER++++++++++++++++++++++-->
+
 <div class="row">
-    <div class="row col-s-12 header ">
+    <div class="row col-s-12 header hover-header">
         <div class="col-s-3">
             <table class="table-header " style="width: 100%; height: 100%">
                 <tr>
@@ -76,7 +79,7 @@
             </table>
         </div>
         <div class="col-s-3  ">
-            <table class=" table-header " style="width: 100%;height: 100%">
+            <table class=" table-header hover-header " style="width: 100%;height: 100%">
                 <tr>
                     <td><img style="border-radius: 50%" src="img/avt.jpg" height="30px" width="30px"/></td>
                     <td style="text-align: left">Sơn</td>
@@ -109,11 +112,17 @@
             </table>
         </div>
     </div>
+
+<!--    +++++++++++++++++++++++CONTENT++++++++++++++++++++++++++-->
+
     <div class="row col-s-12  content">
-        <div class="col-s-3 content-left">
-            <table>
-                <tr>
-                    <td><img style="border-radius: 50%" src="img/avt.jpg" height="35px" width="35px"/></td>
+
+<!--        ++++++++++++++++++++CONTENT LEFT++++++++++++++++++-->
+
+        <div class="col-s-3 content-left hover-content-left ">
+            <table style="width: 100%; height: 100%;text-align: left">
+                <tr class="padding-left">
+                    <td ><img style="border-radius: 50%" src="img/avt.jpg" height="35px" width="35px"/></td>
                     <td>Sơn Lê</td>
                 </tr>
                 <tr>
@@ -141,7 +150,7 @@
                     <td>Đã lưu</td>
                 </tr>
                 <tr>
-                    <td><img src="img/page.png" height="54" width="54"/></td>
+                    <td><img src="img/page.png" height="35" width="35"/></td>
                     <td>Trang</td>
                 </tr>
                 <tr>
@@ -157,7 +166,7 @@
                     <td>Facebook pay</td>
                 </tr>
                 <tr>
-                    <td><img src="img/clock.png" height="35" width="35"/></td>
+                    <td><img src="img/time.png" height="35" width="35"/></td>
                     <td>Gần đây nhất</td>
                 </tr>
                 <tr>
@@ -165,13 +174,29 @@
                     <td>Hiến máu</td>
                 </tr>
                 <tr>
-                    <td><img src="img/mess-green.png" height="54" width="54"/></td>
+                    <td><img src="img/mess-green.png" height="35" width="35"/></td>
                     <td>Messenger nhí</td>
+                </tr>
+                <tr>
+                    <td><img src="img/event.png" height="35" width="35"/></td>
+                    <td>Sự kiện</td>
+                </tr>
+                <tr>
+                    <td><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16"
+                             style="border: 1px solid whitesmoke; border-radius: 50%; background-color: saddlebrown">
+                        <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+                    </svg></td>
+                    <td>Xem thêm</td>
                 </tr>
             </table>
         </div>
-        <div class="col-s-6 " style=" left: 25%; position: relative ">
-            <table style=" width: 100%; padding: 0; margin: 0">
+
+<!--        ++++++++++++++++++++++++++++++CONTENT MAIN+++++++++++++++++++++++-->
+
+        <div class="col-s-6 " style=" left: 25.5%; position: relative ">
+
+<!--            ++++++++++++++++ STORY +++++++++++++++++++++-->
+            <table style=" width: 100%; ">
                 <tr class="story-content" style="padding: 0">
                     <td><img src="img/cute1.jpg" height="220" width="100%"/></td>
                     <td><img src="img/cute2.jpg" height="220" width="100%"/></td>
@@ -188,7 +213,7 @@
                             <td id="bottom-story"><input type="text" placeholder="Sơn ơi, bạn đang nghĩ gì thế?"></td>
                         </tr>
                     </table>
-                    <table class="col-s-12" style="margin-left: 25px">
+                    <table class="col-s-12" style="padding-left: 40px">
                         <tr style="text-align: left;">
                             <td class="margin-bottom-status">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -218,22 +243,27 @@
                         </tr>
                     </table>
                 </div>
+
+<!--                +++++++++++++++++ POSTER ++++++++++++++++-->
+
                 <table class="content-main">
                     <tr>
-                        <img style=" padding: 10px 0" src="img/content2.png" height="950" width="100%"/>
+                        <img style=" padding: 10px 0" src="img/content2.png" height="1100" width="100%"/>
                     </tr>
                     <tr>
-                        <img src="img/content3.png" height="700" width="100%"/>
+                        <img src="img/content3.png" height="800" width="100%"/>
                     </tr>
                     <tr>
                         <img src="img/content4.png" height="835" width="100%"/></tr>
                     <tr>
-                        <img src="img/content5.png" height="872" width="100%"/></tr>
+                        <img src="img/content5.png" height="940" width="100%"/></tr>
                 </table>
             </div>
         </div>
+
+<!--        ++++++++++++++++++++CONTENT RIGHT++++++++++++++++++-->
         <div class="col-s-3" style="left: 75%; position: fixed">
-            <img src="img/right-content3.png" height="610" width="100%"/></div>
+            <img src="img/right-content3.png" height="680" width="100%"/></div>
     </div>
 </div>
 </body>

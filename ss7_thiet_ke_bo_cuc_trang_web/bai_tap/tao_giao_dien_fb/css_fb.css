@@ -18,7 +18,6 @@ input[type="text" i] {
 .row{
     display: flex;
     flex-wrap: wrap;
-    height: 1000px;
 }
 .dow:hover .dow-list{
     display: inline;
@@ -48,7 +47,9 @@ input[type="text" i] {
     /*background-color: #7abaff;*/
     background-color: whitesmoke;
     position: fixed;
-    font-size: 15px;
+    font-size: 17px;
+    height: 700px;
+
 }
 .content{
     position: relative;
@@ -58,6 +59,10 @@ input[type="text" i] {
 .hover-header td:hover{
     background-color: #cccaff;
     color: #ff0202;
+    cursor: pointer;
+}
+.hover-content-left td:hover{
+    color: #ff9700;
     cursor: pointer;
 }
 .story-content td {
@@ -85,4 +90,7 @@ input[type="text" i] {
 .content-main {
     border-radius: 15%;
     padding: 10px 0px;
+}
+.content-left td{
+    padding-left: 5%
 }
