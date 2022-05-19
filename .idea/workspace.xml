@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba2746dc-b619-4b1a-a623-4f8ea576a391" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/case_study/furama.sql" beforeDir="false" afterPath="$PROJECT_DIR$/case_study/furama.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Module03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Module03.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/phat_trien_trang_web_xem_hoat_hinh_truc_tuyen/css_web_hoat_hinh.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/phat_trien_trang_web_xem_hoat_hinh_truc_tuyen/css_web_hoat_hinh.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/phat_trien_trang_web_xem_hoat_hinh_truc_tuyen/html_web_hoat_hinh.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/phat_trien_trang_web_xem_hoat_hinh_truc_tuyen/html_web_hoat_hinh.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,10 +51,23 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout_voi_cac_the_html_css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Codegym-bt\Module03" />
+      <recent name="D:\Codegym-bt\Module03\ss8_bootstrap_co_ban\thuc_hanh\sd_bootstrap_xay_dung_form_login" />
+      <recent name="D:\Codegym-bt\Module03\ss7_thiet_ke_bo_cuc_trang_web\bai_tap\tao_giao_dien_fb\img\img" />
+      <recent name="D:\Codegym-bt\Module03\demo\test\tao_trang_fb" />
+      <recent name="D:\Codegym-bt\Module03\demo\demo_layout" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym-bt\Module03\ss7_thiet_ke_bo_cuc_trang_web\bai_tap\tao_layout_voi_cac_the_html_css" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -66,7 +83,41 @@
       <workItem from="1652100310650" duration="5717000" />
       <workItem from="1652115876859" duration="624000" />
       <workItem from="1652202080801" duration="9256000" />
-      <workItem from="1652211669192" duration="4421000" />
+      <workItem from="1652211669192" duration="4692000" />
+      <workItem from="1652217317265" duration="1817000" />
+      <workItem from="1652262865818" duration="249000" />
+      <workItem from="1652271805785" duration="7091000" />
+      <workItem from="1652288286231" duration="4998000" />
+      <workItem from="1652325633105" duration="5864000" />
+      <workItem from="1652348610649" duration="6409000" />
+      <workItem from="1652416877507" duration="6761000" />
+      <workItem from="1652423863313" duration="9267000" />
+      <workItem from="1652438478459" duration="8482000" />
+      <workItem from="1652447945274" duration="4907000" />
+      <workItem from="1652458150775" duration="18065000" />
+      <workItem from="1652478675216" duration="153000" />
+      <workItem from="1652512362013" duration="2945000" />
+      <workItem from="1652556908008" duration="316000" />
+      <workItem from="1652557238050" duration="628000" />
+      <workItem from="1652599389480" duration="4906000" />
+      <workItem from="1652612566256" duration="4736000" />
+      <workItem from="1652625488405" duration="8529000" />
+      <workItem from="1652639738090" duration="6862000" />
+      <workItem from="1652646700415" duration="5377000" />
+      <workItem from="1652652201282" duration="3765000" />
+      <workItem from="1652656056615" duration="450000" />
+      <workItem from="1652703995309" duration="4017000" />
+      <workItem from="1652744878469" duration="595000" />
+      <workItem from="1652858398420" duration="6490000" />
+      <workItem from="1652877607759" duration="1063000" />
+      <workItem from="1652883103663" duration="1000" />
+      <workItem from="1652889577204" duration="7793000" />
+      <workItem from="1652898424449" duration="368000" />
+      <workItem from="1652934062106" duration="12000" />
+      <workItem from="1652934452271" duration="597000" />
+      <workItem from="1652936752308" duration="365000" />
+      <workItem from="1652938403367" duration="6000" />
+      <workItem from="1652939825361" duration="458000" />
     </task>
     <servers />
   </component>
@@ -86,10 +137,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1652104755575">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1652469357803">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1652104755575" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1652469357803" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1652100288729">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -98,9 +149,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1652101399493" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1652207106196">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1652895866031">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1652207106196" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1652895866031" />
   </component>
 </project>

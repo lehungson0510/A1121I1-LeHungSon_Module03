@@ -1,6 +1,4 @@
-.col-md-{
 
-}
 .col-md-1 {
     width: 8.33333%;
 }
@@ -137,4 +135,9 @@
     right: 0;
     left: 0;
     text-align: center;
+}
+.cursor-link div:hover{
+    background: #cccaff;
+    color: red;
+    cursor: pointer;
 }
