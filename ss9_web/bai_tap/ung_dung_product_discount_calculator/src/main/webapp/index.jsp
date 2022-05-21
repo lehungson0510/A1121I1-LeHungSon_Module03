@@ -19,6 +19,6 @@
 <h3>Discount</h3>
   <input type="text" name="discount" placeholder="Tỉ lệ chiết khấu (%)">
  <button type="submit">Result</button>
-  </form>\
+  </form>
   </body>
 </html>

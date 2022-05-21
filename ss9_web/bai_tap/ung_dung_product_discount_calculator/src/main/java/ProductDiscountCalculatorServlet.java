@@ -17,7 +17,7 @@ request.setAttribute("production",product);
 request.setAttribute("price",price);
 request.setAttribute("discount",discount);
 request.setAttribute("discount_amount",discount_amount);
-request.getRequestDispatcher("result.jsp").forward(request, response);;
+request.getRequestDispatcher("result.jsp").forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
