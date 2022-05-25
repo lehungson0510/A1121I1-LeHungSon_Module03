@@ -21,21 +21,30 @@
   <component name="ChangeListManager">
     <list default="true" id="ba2746dc-b619-4b1a-a623-4f8ea576a391" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/ProductDiscountCalculatorServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/CalculatorServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/calculator.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/build/libs/hien_thi_ds_khach_hang-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/hien_thi_ds_khach_hang/build/libs/hien_thi_ds_khach_hang-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/build/classes/java/main/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/build/classes/java/main/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/build/classes/java/main/CalculatorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/build/classes/java/main/CalculatorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/build/libs/ung_dung_calculator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/build/libs/ung_dung_calculator-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/src/main/java/CalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jspl/bai_tap/ung_dung_calculator/src/main/java/CalculatorServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss8_bootstrap_co_ban/bai_tap/xay_dung_landing_page/xay_dung_landing_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss8_bootstrap_co_ban/bai_tap/xay_dung_landing_page/xay_dung_landing_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/build/libs/ung_dung_product_discount_calculator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/build/libs/ung_dung_product_discount_calculator-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/src/main/java/ProductDiscountCalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/src/main/java/ProductDiscountCalculatorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_web/bai_tap/ung_dung_product_discount_calculator/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +144,13 @@
       <workItem from="1653149392197" duration="1784000" />
       <workItem from="1653154887413" duration="642000" />
       <workItem from="1653155894213" duration="6350000" />
-      <workItem from="1653162590058" duration="6294000" />
+      <workItem from="1653162590058" duration="7112000" />
+      <workItem from="1653217899033" duration="889000" />
+      <workItem from="1653235730069" duration="4000" />
+      <workItem from="1653281123125" duration="1074000" />
+      <workItem from="1653412005596" duration="16000" />
+      <workItem from="1653412112079" duration="494000" />
+      <workItem from="1653415891437" duration="597000" />
     </task>
     <servers />
   </component>
@@ -167,9 +182,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1652101399493" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1653160981713">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1653281429540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1653160981713" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1653281429540" />
   </component>
 </project>

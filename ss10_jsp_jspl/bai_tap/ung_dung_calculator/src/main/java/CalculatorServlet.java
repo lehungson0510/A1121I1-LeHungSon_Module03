@@ -16,6 +16,7 @@ public class CalculatorServlet extends HttpServlet {
         float num2 = Float.parseFloat(request.getParameter("second-operand"));
         char operator = request.getParameter("operator").charAt(0);
         PrintWriter writer = response.getWriter();
+
         try {
         float result = Calculator.calculate(num1, num2, operator);
         request.setAttribute("firstOperand", num1);
