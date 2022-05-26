@@ -11,34 +11,35 @@
 <head>
     <title>Deleting product</title>
 </head>
-<body>
-<h1>Delete product</h1>
-<p>
-    <a href="/products">Back to product list</a>
-</p>
-<form method="post">
-    <h3>Are you sure?</h3>
-    <fieldset>
-        <legend>Product information</legend>
-        <table>
-            <tr>
-                <td>Name:</td>
-                <td>${requestScope["product"].getName()}</td>
-            </tr>
-            <tr>
-                <td>Price:</td>
-                <td>${requestScope["product"].getPrice()}</td>
-            </tr>
-            <tr>
-                <td>Quantity:</td>
-                <td>${requestScope["product"].getQuantity()}</td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Delete product"></td>
-                <td><a href="/products">Back to product list</a></td>
-            </tr>
-        </table>
-    </fieldset>
-</form>
-</body>
+<center>
+    <body>
+    <h1>Delete product</h1>
+    <p>
+        <a href="/products">Back to product list</a>
+    </p>
+    <form method="post" style="width: 30%">
+        <h3>Are you sure?</h3>
+        <fieldset>
+            <legend>Product information</legend>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td>${requestScope["product"].getName()}</td>
+                </tr>
+                <tr>
+                    <td>Price:</td>
+                    <td>${requestScope["product"].getPrice()}</td>
+                </tr>
+                <tr>
+                    <td>Quantity:</td>
+                    <td>${requestScope["product"].getQuantity()}</td>
+                </tr>
+                <tr style="text-align: center">
+                    <td colspan="2"><input type="submit" value="Delete product"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    </body>
+</center>
 </html>

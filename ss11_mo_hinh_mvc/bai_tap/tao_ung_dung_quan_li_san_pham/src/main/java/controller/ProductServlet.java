@@ -41,8 +41,8 @@ public class ProductServlet extends HttpServlet {
             case "view":
                 viewProduct(request, response);
                 break;
-            case "find":
-                showFindForm(request, response);
+            case "search":
+                findProduct(request, response);
                 break;
             default:
                 showListProducts(request, response);
@@ -65,9 +65,7 @@ public class ProductServlet extends HttpServlet {
             case "delete":
                 deleteProduct(request, response);
                 break;
-            case "find":
-                findProduct(request, response);
-                break;
+
         }
 
     }
@@ -219,16 +217,16 @@ public class ProductServlet extends HttpServlet {
 
 //    *****************Tìm kiếm***********************
 
-    private void showFindForm(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("view/product/find.jsp");
-        try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    private void showFindForm(HttpServletRequest request, HttpServletResponse response) {
+//        RequestDispatcher dispatcher = request.getRequestDispatcher("view/product/find.jsp");
+//        try {
+//            dispatcher.forward(request, response);
+//        } catch (ServletException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     private void findProduct(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String name = request.getParameter("name");
@@ -236,10 +234,12 @@ public class ProductServlet extends HttpServlet {
         RequestDispatcher dispatcher ;
         if (product == null) {
             request.setAttribute("message", "Name not found");
-           dispatcher = request.getRequestDispatcher("view/product/find.jsp");
+            showListProducts(request, response);
+            dispatcher = request.getRequestDispatcher("view/product/list.jsp");
+
         } else {
             request.setAttribute("product", product);
-            dispatcher = request.getRequestDispatcher("view/product/find.jsp");
+            dispatcher = request.getRequestDispatcher("view/product/view.jsp");
         }
         try {
             dispatcher.forward(request, response);

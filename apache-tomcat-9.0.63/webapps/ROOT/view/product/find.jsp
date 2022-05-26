@@ -11,33 +11,35 @@
 <head>
     <title>Search product</title>
 </head>
-<body>
-<h1>Search product</h1>
-<p>
-    <a href="/products">Back to product list</a>
-    <%--************************Để tìm kiếm***********************--%>
-</p>
-<form method="post">
-    <input type="text" placeholder="Input name" name="name">
-    <button type="submit">Search</button>
-</form>
-<p>
-    <c:if test='${requestScope["message"] != null}'>
-    <span class="message">${requestScope["message"]}</span>
-    </c:if>
-<table>
-    <tr>
-        <td>Name:</td>
-        <td>${requestScope["product"].getName()}</td>
-    </tr>
-    <tr>
-        <td>Price:</td>
-        <td>${requestScope["product"].getPrice()}</td>
-    </tr>
-    <tr>
-        <td>Quantity:</td>
-        <td>${requestScope["product"].getQuantity()}</td>
-    </tr>
-</table>
-</body>
+<center>
+    <body>
+    <h1>Search product</h1>
+    <p>
+        <a href="/products">Back to product list</a>
+        <%--************************Để tìm kiếm***********************--%>
+    </p>
+    <form method="post">
+        <input type="text" placeholder="Input name" name="name">
+        <button type="submit">Search</button>
+    </form>
+    <p>
+        <c:if test='${requestScope["message"] != null}'>
+        <span class="message">${requestScope["message"]}</span>
+        </c:if>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>${requestScope["product"].getName()}</td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td>${requestScope["product"].getPrice()}</td>
+        </tr>
+        <tr>
+            <td>Quantity:</td>
+            <td>${requestScope["product"].getQuantity()}</td>
+        </tr>
+    </table>
+    </body>
+</center>
 </html>
