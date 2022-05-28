@@ -9,12 +9,18 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
 <center>
     <h1>User Management</h1>
     <h2>
-        <a href="users?action=users">List All Users</a>
+        <button style="height: 50px; width: 100px"><a href="users?action=users">List All Users</a></button>
     </h2>
 </center>
 <div align="center">

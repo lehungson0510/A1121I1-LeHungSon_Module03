@@ -10,15 +10,21 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
 </head>
 <center>
     <body>
     <h1>User details</h1>
     <p>
-        <button style="background: #85dfff"><a href="/users">Back to user list</a></button>
+        <button style="background: #85dfff; width: 100px; height: 50px"><a href="/users">List All Users</a></button>
     </p>
     <p>
-    <table border="1px">
+    <table border="1px" width="50%" height="300px" style="text-align: center">
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -27,10 +33,10 @@
         </tr>
         <c:forEach items="${userList}" var="user">
             <tr>
-                <td><c:out value="${user.id}"/></td>
-                <td><c:out value="${user.name}"/></td>
-                <td><c:out value="${user.email}"/></td>
-                <td><c:out value="${user.country}"/></td>
+                <td> ${user.id}</td>
+                <td> ${user.name}</td>
+                <td> ${user.email}</td>
+                <td> ${user.country}</td>
             </tr>
         </c:forEach>
     </table>

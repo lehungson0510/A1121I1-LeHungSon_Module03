@@ -135,8 +135,8 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
         List<User> userList = userService.selectUserByCountry(country);
         RequestDispatcher dispatcher ;
-        if (userList == null) {
-            request.setAttribute("message", "Name not found");
+        if (userList.isEmpty()) {
+            request.setAttribute("message", "Country not found");
             listUser(request, response);
             dispatcher = request.getRequestDispatcher("view/user/list.jsp");
 
