@@ -140,8 +140,7 @@ public class UserServlet extends HttpServlet {
 
         List<User> listUser = userService.selectAllUser();
         request.setAttribute("listUser", listUser);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
-        dispatcher.forward(request, response);
+        response.sendRedirect("/users");
     }
 
     private void searchUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
