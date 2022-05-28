@@ -20,30 +20,73 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba2746dc-b619-4b1a-a623-4f8ea576a391" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss12_jdbc_amp_crud/thuc_hanh/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/template/bootstrap/bootstrap-5.1.3-dist/js/bootstrap.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/delete.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/find.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/find.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/HomeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/bean/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repository/impl/IProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repository/impl/impl/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/impl/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/error-404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/find.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apache-tomcat-9.0.63/webapps/ROOT/view/product/view.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/build/classes/java/main/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/build/classes/java/main/controller/ProductServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/build/libs/tao_ung_dung_quan_li_san_pham-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/build/libs/tao_ung_dung_quan_li_san_pham-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/java/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/java/controller/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/delete.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/find.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/find.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss11_mo_hinh_mvc/bai_tap/tao_ung_dung_quan_li_san_pham/src/main/webapp/view/product/view.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +194,8 @@
       <workItem from="1653412112079" duration="494000" />
       <workItem from="1653415891437" duration="597000" />
       <workItem from="1653482092711" duration="597000" />
+      <workItem from="1653657688593" duration="598000" />
+      <workItem from="1653753328381" duration="595000" />
     </task>
     <servers />
   </component>
