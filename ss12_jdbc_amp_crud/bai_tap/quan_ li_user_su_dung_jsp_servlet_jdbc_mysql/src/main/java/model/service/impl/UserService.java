@@ -36,7 +36,13 @@ public class UserService implements IUserService {
         return userRepository.updateUser(user);
     }
 
+    @Override
     public List<User> selectUserByCountry(String country) {
         return  userRepository.selectUserByCountry(country);
+    }
+
+    @Override
+    public List<User> sort() {
+        return userRepository.sort();
     }
 }

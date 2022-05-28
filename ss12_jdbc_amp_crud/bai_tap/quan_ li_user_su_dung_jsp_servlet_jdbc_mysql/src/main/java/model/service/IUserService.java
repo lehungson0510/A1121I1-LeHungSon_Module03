@@ -18,4 +18,5 @@ public interface IUserService {
 
     public List<User> selectUserByCountry(String country);
 
+    public List<User> sort();
 }
