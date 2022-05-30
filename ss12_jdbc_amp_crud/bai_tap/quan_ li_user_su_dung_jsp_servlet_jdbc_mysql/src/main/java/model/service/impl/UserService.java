@@ -12,8 +12,8 @@ public class UserService implements IUserService {
     public IUserRepository userRepository = new UserRepository();
 
     @Override
-    public void insertUser(User user) throws SQLException {
-        userRepository.insertUser(user);
+    public boolean insertUser(User user) throws SQLException {
+        return  userRepository.insertUser(user);
     }
 
     @Override

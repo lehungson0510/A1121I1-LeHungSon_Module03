@@ -115,7 +115,12 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-        userService.insertUser(newUser);
+        boolean check = userService.insertUser(newUser);
+        if (check){
+            request.setAttribute("message","User was Added");
+        } else {
+            request.setAttribute("message","Unsuccessful");
+        }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/create.jsp");
         dispatcher.forward(request, response);
     }
@@ -126,9 +131,13 @@ public class UserServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
-
         User book = new User(id, name, email, country);
-        userService.updateUser(book);
+        boolean flag = userService.updateUser(book);
+        if(flag){
+            request.setAttribute("message","User information was updated");
+        } else {
+            request.setAttribute("message","Unsuccessful");
+        }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/edit.jsp");
         dispatcher.forward(request, response);
     }
@@ -136,11 +145,17 @@ public class UserServlet extends HttpServlet {
     private void deleteUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
-        userService.deleteUser(id);
-
+        boolean flag = userService.deleteUser(id);
+        if (flag){
+            request.setAttribute("message","User was Deleted");
+        } else {
+            request.setAttribute("message","Unsuccessful");
+        }
         List<User> listUser = userService.selectAllUser();
         request.setAttribute("listUser", listUser);
-        response.sendRedirect("/users");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
+        dispatcher.forward(request, response);
+//        response.sendRedirect("/users");
     }
 
     private void searchUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {

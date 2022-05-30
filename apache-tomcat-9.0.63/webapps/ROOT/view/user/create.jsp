@@ -21,6 +21,7 @@
     <h1>User Management</h1>
     <h2>
        <button style="height: 50px; width: 100px"><a href="users?action=users">List All Users</a></button>
+        <h3 style="color: #ff896e">${message}</h3>
     </h2>
 </center>
 <div align="center">

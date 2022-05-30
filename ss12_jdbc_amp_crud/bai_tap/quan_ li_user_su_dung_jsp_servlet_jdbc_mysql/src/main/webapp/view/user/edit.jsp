@@ -22,6 +22,7 @@
     <h2>
         <button style="height: 50px; width: 100px"><a href="users?action=users">List All Users</a></button>
     </h2>
+    <h3 style="color: #ff896e">${message}</h3>
 </center>
 <div align="center">
     <form method="post">

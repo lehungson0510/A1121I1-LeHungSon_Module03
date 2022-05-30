@@ -1,6 +1,7 @@
 package model.repository.impl;
 
 import model.bean.User;
+import model.repository.BaseRepository;
 import model.repository.IUserRepository;
 
 import java.sql.*;
@@ -25,35 +26,27 @@ public class UserRepository implements IUserRepository {
     public UserRepository() {
     }
 
-    protected Connection getConnection() {
-        Connection connection = null;
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return connection;
-    }
 
     @Override
-    public void insertUser(User user) throws SQLException {
+    public boolean insertUser(User user) throws SQLException {
         System.out.println(INSERT_USERS_SQL);
-        try (Connection connection = getConnection();
+        try (Connection connection = BaseRepository.getConnect();
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCountry());
             System.out.println(preparedStatement);
-            preparedStatement.executeUpdate();
+            int check = preparedStatement.executeUpdate();
+            if (check != 0) {
+                return true;
+            }
         } catch (SQLException e) {
             printSQLException(e);
         }
+        return false;
     }
+
+//    *************** Xoá cũng được*******************
 
     private void printSQLException(SQLException ex) {
         for (Throwable e : ex) {
@@ -75,7 +68,7 @@ public class UserRepository implements IUserRepository {
     public User selectUser(int id) {
         User user = null;
         // Step 1: Establishing a Connection
-        try (Connection connection = getConnection();
+        try (Connection connection = BaseRepository.getConnect();
              // Step 2:Create a statement using connection object
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_ID);) {
             preparedStatement.setInt(1, id);
@@ -99,7 +92,7 @@ public class UserRepository implements IUserRepository {
     @Override
     public List<User> selectAllUser() {
         List<User> users = new ArrayList<>();
-        try (Connection connection = getConnection();
+        try (Connection connection = BaseRepository.getConnect();
 
              // Step 2:Create a statement using connection object
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
@@ -121,9 +114,9 @@ public class UserRepository implements IUserRepository {
         return users;
     }
 
-    public List<User> selectUserByCountry(String country ) {
+    public List<User> selectUserByCountry(String country) {
         List<User> users = new ArrayList<>();
-        try (Connection connection = getConnection();
+        try (Connection connection = BaseRepository.getConnect();
 
              // Step 2:Create a statement using connection object
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USERS_BY_COUNTRY);) {
@@ -148,7 +141,7 @@ public class UserRepository implements IUserRepository {
     @Override
     public List<User> sort() {
         List<User> users = new ArrayList<>();
-        try (Connection connection = getConnection();
+        try (Connection connection = BaseRepository.getConnect();
 
              // Step 2:Create a statement using connection object
              PreparedStatement preparedStatement = connection.prepareStatement(ORDER_BY);) {
@@ -173,7 +166,7 @@ public class UserRepository implements IUserRepository {
     @Override
     public boolean deleteUser(int id) throws SQLException {
         boolean rowDeleted;
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
+        try (Connection connection = BaseRepository.getConnect(); PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
             statement.setInt(1, id);
             rowDeleted = statement.executeUpdate() > 0;
         }
@@ -183,12 +176,11 @@ public class UserRepository implements IUserRepository {
     @Override
     public boolean updateUser(User user) throws SQLException {
         boolean rowUpdated;
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
+        try (Connection connection = BaseRepository.getConnect(); PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
             statement.setString(1, user.getName());
             statement.setString(2, user.getEmail());
             statement.setString(3, user.getCountry());
             statement.setInt(4, user.getId());
-
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;
