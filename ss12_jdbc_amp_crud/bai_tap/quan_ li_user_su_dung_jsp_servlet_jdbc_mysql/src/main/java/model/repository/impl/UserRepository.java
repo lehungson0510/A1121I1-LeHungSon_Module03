@@ -117,14 +117,12 @@ public class UserRepository implements IUserRepository {
     public List<User> selectUserByCountry(String country) {
         List<User> users = new ArrayList<>();
         try (Connection connection = BaseRepository.getConnect();
-
              // Step 2:Create a statement using connection object
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USERS_BY_COUNTRY);) {
             preparedStatement.setString(1, country);
             System.out.println(preparedStatement);
             // Step 3: Execute the query or update query
             ResultSet rs = preparedStatement.executeQuery();
-
             // Step 4: Process the ResultSet object.
             while (rs.next()) {
                 int id = rs.getInt("id");
@@ -143,10 +141,11 @@ public class UserRepository implements IUserRepository {
         List<User> users = new ArrayList<>();
         try (Connection connection = BaseRepository.getConnect();
 
-             // Step 2:Create a statement using connection object
+//           kiểu như câu lệnh truy vấn
              PreparedStatement preparedStatement = connection.prepareStatement(ORDER_BY);) {
             System.out.println(preparedStatement);
-            // Step 3: Execute the query or update query
+
+//           đọc từ database
             ResultSet rs = preparedStatement.executeQuery();
 
             // Step 4: Process the ResultSet object.
