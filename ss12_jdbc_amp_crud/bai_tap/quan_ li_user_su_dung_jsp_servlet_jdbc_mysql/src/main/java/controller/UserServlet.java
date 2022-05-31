@@ -44,7 +44,7 @@ public class UserServlet extends HttpServlet {
                     searchUser(request, response);
                     break;
                 case "sort":
-                    listUserSorted(request,response);
+                    listUserSorted(request, response);
                     break;
                 default:
                     listUser(request, response);
@@ -114,10 +114,10 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
         boolean check = userService.insertUser(newUser);
-        if (check){
-            request.setAttribute("message","User was Added");
+        if (check) {
+            request.setAttribute("message", "User was Added");
         } else {
-            request.setAttribute("message","Unsuccessful");
+            request.setAttribute("message", "Unsuccessful");
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/create.jsp");
         dispatcher.forward(request, response);
@@ -131,10 +131,10 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
         User book = new User(id, name, email, country);
         boolean flag = userService.updateUser(book);
-        if(flag){
-            request.setAttribute("message","User information was updated");
+        if (flag) {
+            request.setAttribute("message", "User information was updated");
         } else {
-            request.setAttribute("message","Unsuccessful");
+            request.setAttribute("message", "Unsuccessful");
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/edit.jsp");
         dispatcher.forward(request, response);
@@ -144,10 +144,10 @@ public class UserServlet extends HttpServlet {
             throws SQLException, IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
         boolean flag = userService.deleteUser(id);
-        if (flag){
-            request.setAttribute("message","User was Deleted");
+        if (flag) {
+            request.setAttribute("message", "User was Deleted");
         } else {
-            request.setAttribute("message","Unsuccessful");
+            request.setAttribute("message", "Unsuccessful");
         }
         List<User> listUser = userService.selectAllUser();
         request.setAttribute("listUser", listUser);
@@ -159,15 +159,20 @@ public class UserServlet extends HttpServlet {
     private void searchUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
         String country = request.getParameter("country");
         List<User> userList = userService.selectUserByCountry(country);
-        RequestDispatcher dispatcher ;
+        RequestDispatcher dispatcher;
         if (userList.isEmpty()) {
             request.setAttribute("message", "Country not found");
             listUser(request, response);
             dispatcher = request.getRequestDispatcher("view/user/list.jsp");
 
         } else {
+//            ****************** Trả về hết danh sách hiện có *************************
+            List<User> listUser = userService.selectAllUser();
+            request.setAttribute("listUser", listUser);
+
+//            ********************** Trả về list search ********************************
             request.setAttribute("userList", userList);
-            dispatcher = request.getRequestDispatcher("view/user/view.jsp");
+            dispatcher = request.getRequestDispatcher("view/user/list.jsp");
         }
         try {
             dispatcher.forward(request, response);

@@ -17,8 +17,8 @@
         color: blue;
     }
 </style>
-<body>
 <center>
+<body>
     <h1>User Management</h1>
     <h2>
         <button style="height: 50px; width: 200px"><a href="/users?action=create">Add New User</a></button>
@@ -33,7 +33,25 @@
         </h2>
     </form>
     <h3 style="color: #ff896e">${message}</h3>
-</center>
+
+<c:if test="${userList != null}">
+<table border="1px" width="50%" height="300px" style="text-align: center">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Country</th>
+    </tr>
+    <c:forEach items="${userList}" var="user">
+        <tr>
+            <td> ${user.id}</td>
+            <td> ${user.name}</td>
+            <td> ${user.email}</td>
+            <td> ${user.country}</td>
+        </tr>
+    </c:forEach>
+</table>
+</c:if>
 <div align="center">
     <table border="1" cellpadding="5" style="width: 50%; height: 300px; text-align: center">
         <caption><h2>List of Users</h2></caption>
@@ -59,4 +77,5 @@
     </table>
 </div>
 </body>
+</center>
 </html>
