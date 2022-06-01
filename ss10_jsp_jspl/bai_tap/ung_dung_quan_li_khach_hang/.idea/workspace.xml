@@ -20,31 +20,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="521bc7cc-8789-4da4-94c1-073fce159293" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/CalculatorServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/calculator.jsp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ung_dung_quan_li_khach_hang.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/HomeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/build/libs/hien_thi_ds_khach_hang-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../hien_thi_ds_khach_hang/build/libs/hien_thi_ds_khach_hang-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/build/classes/java/main/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/build/classes/java/main/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/build/classes/java/main/CalculatorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/build/classes/java/main/CalculatorServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/build/libs/ung_dung_calculator-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/build/libs/ung_dung_calculator-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ung_dung_calculator/src/main/java/CalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ung_dung_calculator/src/main/java/CalculatorServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss8_bootstrap_co_ban/bai_tap/xay_dung_landing_page/xay_dung_landing_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss8_bootstrap_co_ban/bai_tap/xay_dung_landing_page/xay_dung_landing_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_web/bai_tap/ung_dung_product_discount_calculator/src/main/java/ProductDiscountCalculatorServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_web/bai_tap/ung_dung_product_discount_calculator/src/main/java/ProductDiscountCalculatorServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/product/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/product/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/product/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/product/error-404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/product/find.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/product/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/product/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/model/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/model/repository/IUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/model/repository/impl/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/model/repository/impl/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/model/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/model/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/model/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/classes/java/main/model/service/impl/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/libs/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/libs/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/model/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/model/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/model/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/model/repository/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/model/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/model/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/model/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/java/model/service/impl/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/view/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/view/user/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +93,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ss11_mo_hinh_mvc/thuc_hanh/ung_dung_quan_li_khach_hang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -249,6 +256,7 @@
       <updated>1653311018708</updated>
       <workItem from="1653311021758" duration="5288000" />
       <workItem from="1653356293883" duration="57000" />
+      <workItem from="1654054939674" duration="596000" />
     </task>
     <servers />
   </component>

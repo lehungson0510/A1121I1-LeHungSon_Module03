@@ -42,7 +42,7 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public List<User> sort() {
-        return userRepository.sort();
+    public List<User> sort(String sortProperty) {
+        return userRepository.sort(sortProperty);
     }
 }

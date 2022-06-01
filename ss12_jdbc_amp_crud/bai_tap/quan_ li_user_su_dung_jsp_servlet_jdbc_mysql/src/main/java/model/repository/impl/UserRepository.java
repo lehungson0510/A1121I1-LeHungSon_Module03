@@ -21,7 +21,9 @@ public class UserRepository implements IUserRepository {
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
     private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
     private static final String SELECT_USERS_BY_COUNTRY = "select * from users where country like ?";
-    private static final String ORDER_BY = "select * from users order by `name`";
+    private static final String ORDER_BY_NAME = "select * from users order by `name`";
+    private static final String ORDER_BY_EMAIL = "select * from users order by `email`";
+    private static final String ORDER_BY_COUNTRY = "select * from users order by `country`";
 
     public UserRepository() {
     }
@@ -128,6 +130,7 @@ public class UserRepository implements IUserRepository {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String email = rs.getString("email");
+                country= rs.getString("country");
                 users.add(new User(id, name, email, country));
             }
         } catch (SQLException e) {
@@ -137,29 +140,75 @@ public class UserRepository implements IUserRepository {
     }
 
     @Override
-    public List<User> sort() {
+    public List<User> sort(String sortProperty) {
         List<User> users = new ArrayList<>();
-        try (Connection connection = BaseRepository.getConnect();
+        switch (sortProperty){
+            case "name":
+                try (Connection connection = BaseRepository.getConnect();
+//           kiểu như câu lệnh truy vấn
+                     PreparedStatement preparedStatement = connection.prepareStatement(ORDER_BY_NAME);) {
+                    System.out.println(preparedStatement);
+//           đọc từ database
+                    ResultSet rs = preparedStatement.executeQuery();
+
+                    // Step 4: Process the ResultSet object.
+                    while (rs.next()) {
+                        int id = rs.getInt("id");
+                        String name = rs.getString("name");
+                        String email = rs.getString("email");
+                        String country = rs.getString("country");
+                        users.add(new User(id, name, email, country));
+                    }
+                } catch (SQLException e) {
+                    printSQLException(e);
+                }
+                return users;
+            case "email":
+                try (Connection connection = BaseRepository.getConnect();
 
 //           kiểu như câu lệnh truy vấn
-             PreparedStatement preparedStatement = connection.prepareStatement(ORDER_BY);) {
-            System.out.println(preparedStatement);
+                     PreparedStatement preparedStatement = connection.prepareStatement(ORDER_BY_EMAIL);) {
+                    System.out.println(preparedStatement);
 
 //           đọc từ database
-            ResultSet rs = preparedStatement.executeQuery();
+                    ResultSet rs = preparedStatement.executeQuery();
 
-            // Step 4: Process the ResultSet object.
-            while (rs.next()) {
-                int id = rs.getInt("id");
-                String name = rs.getString("name");
-                String email = rs.getString("email");
-                String country = rs.getString("country");
-                users.add(new User(id, name, email, country));
-            }
-        } catch (SQLException e) {
-            printSQLException(e);
+                    // Step 4: Process the ResultSet object.
+                    while (rs.next()) {
+                        int id = rs.getInt("id");
+                        String name = rs.getString("name");
+                        String email = rs.getString("email");
+                        String country = rs.getString("country");
+                        users.add(new User(id, name, email, country));
+                    }
+                } catch (SQLException e) {
+                    printSQLException(e);
+                }
+                return users;
+            case "country":
+                try (Connection connection = BaseRepository.getConnect();
+
+//           kiểu như câu lệnh truy vấn
+                     PreparedStatement preparedStatement = connection.prepareStatement(ORDER_BY_COUNTRY);) {
+                    System.out.println(preparedStatement);
+
+//           đọc từ database
+                    ResultSet rs = preparedStatement.executeQuery();
+
+                    // Step 4: Process the ResultSet object.
+                    while (rs.next()) {
+                        int id = rs.getInt("id");
+                        String name = rs.getString("name");
+                        String email = rs.getString("email");
+                        String country = rs.getString("country");
+                        users.add(new User(id, name, email, country));
+                    }
+                } catch (SQLException e) {
+                    printSQLException(e);
+                }
+                return users;
         }
-        return users;
+        return selectAllUser();
     }
 
     @Override

@@ -85,8 +85,9 @@ public class UserServlet extends HttpServlet {
 
     private void listUserSorted(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
+        String sortProperty = request.getParameter("sortProperty");
         List<User> listUser = userService.selectAllUser();
-        listUser = userService.sort();
+        listUser = userService.sort(sortProperty);
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
         dispatcher.forward(request, response);
