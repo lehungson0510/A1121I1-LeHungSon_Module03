@@ -23,9 +23,6 @@
     <h2>
         <button style="height: 50px; width: 200px"><a href="/users?action=create">Add New User</a></button>
     </h2>
-    <h2>
-        <button style="height: 50px; width: 200px"><a href="/users?action=sort">Sort List All Users</a></button>
-    </h2>
     <form action="users">
         <h2>
             <input name="country"  placeholder=" Input country" type="text" style="height: 30px; font-size: 15px">
