@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="521bc7cc-8789-4da4-94c1-073fce159293" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repository/IUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repository/impl/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repository/impl/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/impl/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.63/webapps/ROOT/view/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/libs/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/build/libs/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/view/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jdbc_amp_crud/bai_tap/quan_ li_user_su_dung_jsp_servlet_jdbc_mysql/src/main/webapp/view/user/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,6 +235,8 @@
       <workItem from="1653311021758" duration="5288000" />
       <workItem from="1653356293883" duration="57000" />
       <workItem from="1654054939674" duration="596000" />
+      <workItem from="1654087349114" duration="184000" />
+      <workItem from="1654167912728" duration="7000" />
     </task>
     <servers />
   </component>
