@@ -35,8 +35,8 @@
             <label for="type"></label>
             <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Rent Type</option>
-                <c:forEach items="${rentTypeList}" var="rentType">
-                    <option value="${rentType.rentTypeId}">${rentType.rentTypeName}</option>
+                <c:forEach items="${rentTypeList}" var="position">
+                    <option value="${position.rentTypeId}">${position.rentTypeName}</option>
                 </c:forEach>
             </select>
             <select id="type" name="typeSearch" class="form-control mr-sm-2">

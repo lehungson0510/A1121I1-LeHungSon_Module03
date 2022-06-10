@@ -32,15 +32,15 @@
     <div class="col-md-5 d-flex justify-content-end align-items-center">
         <form class="form-inline  my-2 my-lg-0" method="get">
             <input style="width: 140px" class="form-control mr-sm-2 " type="search" name="nameSearch"
-                   placeholder="Input name" aria-label="name">
+                   placeholder="Input name" value="${nameSearch}" aria-label="name">
             <label for="type"></label>
-            <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
-                <option value="">Choose Position</option>
+            <select id="rentType" name="positionSearch" class="form-control mr-sm-2">
+                <option value="">Choose position</option>
                 <c:forEach items="${positionList}" var="position">
                     <option value="${position.positionId}">${position.positionName}</option>
                 </c:forEach>
             </select>
-            <select id="type" name="typeSearch" class="form-control mr-sm-2">
+            <select id="type" name="divisionSearch" class="form-control mr-sm-2">
                 <option value="">Choose Division</option>
                 <c:forEach items="${divisionList}" var="division">
                     <option value="${division.divisionId}">${division.divisionName}</option>

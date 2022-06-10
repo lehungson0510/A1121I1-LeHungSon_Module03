@@ -32,19 +32,19 @@
     </div>
     <div class="col-md-5 d-flex justify-content-end align-items-center">
         <form class="form-inline  my-2 my-lg-0" method="get">
-            <input style="width: 140px" class="form-control mr-sm-2 " type="search" name="nameSearch"
+            <input style="width: 140px" class="form-control mr-sm-2 " id="nameSearch" type="search" name="nameSearch"
                    placeholder="Input name" aria-label="name">
-            <label for="type"></label>
+            <label for="nameSearch"></label>
             <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
-                <option value="">Choose Rent Type</option>
-                <c:forEach items="${rentTypeList}" var="rentType">
-                    <option value="${rentType.rentTypeId}">${rentType.rentTypeName}</option>
+                <option value="">Choose position</option>
+                <c:forEach items="${positionList}" var="position">
+                    <option value="${position.positionId}">${position.positionName}</option>
                 </c:forEach>
             </select>
             <select id="typeSearch" name="typeSearch" class="form-control mr-sm-2">
-                <option value="">Choose Type</option>
-                <c:forEach items="${serviceTypeList}" var="position">
-                    <option value="${position.serviceTypeId}">${position.serviceTypeName}</option>
+                <option value="">Choose division</option>
+                <c:forEach items="${divisionList}" var="division">
+                    <option value="${division.divisionId}">${division.divisionName}</option>
                 </c:forEach>
             </select>
             <label for="rentType"></label>
@@ -59,7 +59,7 @@
     <%@include file="/template/sidebar.jsp" %>
     <div class="col-md-10  " style="width: 100%">
         <center>
-            <h2 class="m-4">Create customerr</h2>
+            <h2 class="m-4">Create employee</h2>
             <c:if test="${message!=null}">
                 <h3 class="text-success">${message}</h3>
             </c:if>
@@ -69,57 +69,66 @@
                         <label for="inputName">Name</label>
                         <input type="text" name="name" class="form-control" id="inputName">
                     </div>
-                    <div class="form-group col-md-3">
-                        <label for="type">Type</label>
-                        <select id="type" name="type" class="form-control">
-                            <option>Choose...</option>
-                            <c:forEach items="${serviceTypeList}" var="position">
-                                <option value="${position.serviceTypeId}">${position.serviceTypeName}</option>
+                    <div class="form-group col-md-2">
+                        <label for="position">Position</label>
+                        <select id="position" name="position" class="form-control">
+                            <option>Choose</option>
+                            <c:forEach items="${positionList}" var="position">
+                                <option value="${position.positionId}">${position.positionName}</option>
                             </c:forEach>
                         </select>
                     </div>
-                    <div class="form-group col-md-3">
-                        <label for="rent">Rent Type</label>
-                        <select id="rent" name="rentType" class="form-control">
+                    <div class="form-group col-md-2">
+                        <label for="division">Division</label>
+                        <select id="division" name="division" class="form-control">
                             <option>Choose...</option>
-                            <c:forEach items="${rentTypeList}" var="rentType">
-                                <option value="${rentType.rentTypeId}">${rentType.rentTypeName}</option>
+                            <c:forEach items="${divisionList}" var="division">
+                                <option value="${division.divisionId}">${division.divisionName}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="education">Education</label>
+                        <select id="education" name="education" class="form-control">
+                            <option>Choose...</option>
+                            <c:forEach items="${educationDegreeList}" var="education">
+                                <option value="${education.educationDegreeId}">${education.educationDegreeName}</option>
                             </c:forEach>
                         </select>
                     </div>
                 </div>
                 <div class="form-row my-4">
                     <div class="form-group col-md-4">
-                        <label for="standard">Standard room</label>
-                        <input type="text" name="standardRoom" class="form-control" id="standard">
+                        <label for="birthday">Birthday</label>
+                        <input type="date" name="birthday" class="form-control" id="birthday">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="floors">Floors</label>
-                        <input type="text" name="numOfFloors" class="form-control" id="floors">
+                        <label for="idCard">ID Card</label>
+                        <input type="text" name="idCard" class="form-control" id="idCard">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="maxPeople">Max people</label>
-                        <input type="text" name="maxPeople" class="form-control" id="maxPeople">
+                        <label for="salary">Salary</label>
+                        <input type="text" name="salary" class="form-control" id="salary">
                     </div>
                 </div>
                 <div class="form-row my-4">
                     <div class="form-group col-md-12">
-                        <label for="description">Description Other Convenience</label>
-                        <input type="text" name="description" class="form-control" id="description">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" class="form-control" id="address">
                     </div>
                 </div>
                 <div class="form-row my-4">
                     <div class="form-group col-md-4">
-                        <label for="area">Area</label>
-                        <input type="text" name="area" class="form-control" id="area">
+                        <label for="phone">Phone</label>
+                        <input type="text" name="phone" class="form-control" id="phone">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="cost">Cost</label>
-                        <input type="text" name="cost" class="form-control" id="cost">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" class="form-control" id="email">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="pool">Pool area</label>
-                        <input type="text" name="poolArea" class="form-control" id="pool">
+                        <label for="user">User</label>
+                        <input type="text" name="username" class="form-control" id="user">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-warning btn-outline-success">Save</button>

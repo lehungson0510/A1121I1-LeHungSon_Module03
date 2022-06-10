@@ -37,8 +37,8 @@
             <label for="type"></label>
             <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Rent Type</option>
-                <c:forEach items="${rentTypeList}" var="rentType">
-                    <option value="${rentType.rentTypeId}">${rentType.rentTypeName}</option>
+                <c:forEach items="${rentTypeList}" var="position">
+                    <option value="${position.rentTypeId}">${position.rentTypeName}</option>
                 </c:forEach>
             </select>
             <select id="typeSearch" name="typeSearch" class="form-control mr-sm-2">
@@ -59,7 +59,7 @@
     <%@include file="/template/sidebar.jsp" %>
     <div class="col-md-10  " style="width: 100%">
         <center>
-            <h2 class="m-4">Create customerr</h2>
+            <h2 class="m-4">Create service</h2>
             <c:if test="${message!=null}">
                 <h3 class="text-success">${message}</h3>
             </c:if>
@@ -82,8 +82,8 @@
                         <label for="rent">Rent Type</label>
                         <select id="rent" name="rentType" class="form-control">
                             <option>Choose...</option>
-                            <c:forEach items="${rentTypeList}" var="rentType">
-                                <option value="${rentType.rentTypeId}">${rentType.rentTypeName}</option>
+                            <c:forEach items="${rentTypeList}" var="position">
+                                <option value="${position.rentTypeId}">${position.rentTypeName}</option>
                             </c:forEach>
                         </select>
                     </div>

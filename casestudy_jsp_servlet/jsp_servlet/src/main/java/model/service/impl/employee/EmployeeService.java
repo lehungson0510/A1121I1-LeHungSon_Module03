@@ -1,5 +1,6 @@
 package model.service.impl.employee;
 
+import model.bean.Customer;
 import model.bean.Employee;
 import model.repository.iemployee.IEmployeeRepository;
 import model.repository.impl.employee.EmployeeRepository;
@@ -33,5 +34,10 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public boolean deleteEmployee(int id) throws SQLException {
         return employeeRepository.deleteEmployee(id);
+    }
+
+    @Override
+    public List<Employee> search(String name, String position, String division) {
+        return employeeRepository.search(name,position,division);
     }
 }

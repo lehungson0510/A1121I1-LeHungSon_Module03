@@ -59,20 +59,27 @@
     <%@include file="/template/sidebar.jsp" %>
     <div class="col-md-10  " style="width: 100%">
         <center>
-            <h2 class="m-4">Create employee</h2>
+            <h2 class="m-4">Edit employee</h2>
             <c:if test="${message!=null}">
                 <h3 class="text-success">${message}</h3>
             </c:if>
             <form class="container" method="post">
+                <c:if test="${employee != null}">
+                    <input type="hidden" name="id" value="<c:out value='${employee.employeeId}' />"/>
+                </c:if>
                 <div class="form-row my-4">
                     <div class="form-group col-md-6">
                         <label for="inputName">Name</label>
-                        <input type="text" name="name" class="form-control" id="inputName">
+                        <input type="text" name="name" value="${employee.employeeName}" class="form-control" id="inputName">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="position">Position</label>
                         <select id="position" name="position" class="form-control">
-                            <option>Choose</option>
+                            <c:forEach items="${positionList}" var="position">
+                                <c:if test="${position.positionId == employee.positionId}">
+                                    <option value="${position.positionId}">${position.positionName}</option>
+                                </c:if>
+                            </c:forEach>
                             <c:forEach items="${positionList}" var="position">
                                 <option value="${position.positionId}">${position.positionName}</option>
                             </c:forEach>
@@ -81,7 +88,11 @@
                     <div class="form-group col-md-2">
                         <label for="division">Division</label>
                         <select id="division" name="division" class="form-control">
-                            <option>Choose...</option>
+                            <c:forEach items="${divisionList}" var="division">
+                                <c:if test="${division.divisionId == employee.divisionId}">
+                                <option value="${division.divisionId}">${division.divisionName}</option>
+                                </c:if>
+                            </c:forEach>
                             <c:forEach items="${divisionList}" var="division">
                                 <option value="${division.divisionId}">${division.divisionName}</option>
                             </c:forEach>
@@ -90,7 +101,11 @@
                     <div class="form-group col-md-2">
                         <label for="education">Education</label>
                         <select id="education" name="education" class="form-control">
-                            <option>Choose...</option>
+                            <c:forEach items="${educationDegreeList}" var="education">
+                                <c:if test="${education.educationDegreeId == employee.educationDegreeId}">
+                                    <option value="${education.educationDegreeId}">${education.educationDegreeName}</option>
+                                </c:if>
+                            </c:forEach>
                             <c:forEach items="${educationDegreeList}" var="education">
                                 <option value="${education.educationDegreeId}">${education.educationDegreeName}</option>
                             </c:forEach>
@@ -100,35 +115,35 @@
                 <div class="form-row my-4">
                     <div class="form-group col-md-4">
                         <label for="birthday">Birthday</label>
-                        <input type="date" name="birthday" class="form-control" id="birthday">
+                        <input type="date" name="birthday" value="${employee.employeeBirthday}" class="form-control" id="birthday">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="idCard">ID Card</label>
-                        <input type="text" name="idCard" class="form-control" id="idCard">
+                        <input type="text" name="idCard" value="${employee.employeeIdCard}" class="form-control" id="idCard">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="salary">Salary</label>
-                        <input type="text" name="salary" class="form-control" id="salary">
+                        <input type="text" name="salary" value="${employee.employeeSalary}" class="form-control" id="salary">
                     </div>
                 </div>
                 <div class="form-row my-4">
                     <div class="form-group col-md-12">
                         <label for="address">Address</label>
-                        <input type="text" name="address" class="form-control" id="address">
+                        <input type="text" name="address" value="${employee.employeeAddress}" class="form-control" id="address">
                     </div>
                 </div>
                 <div class="form-row my-4">
                     <div class="form-group col-md-4">
                         <label for="phone">Phone</label>
-                        <input type="text" name="phone" class="form-control" id="phone">
+                        <input type="text" name="phone" value="${employee.employeePhone}" class="form-control" id="phone">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="email">Email</label>
-                        <input type="text" name="email" class="form-control" id="email">
+                        <input type="text" name="email" value="${employee.employeeEmail}" class="form-control" id="email">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="user">User</label>
-                        <input type="text" name="username" class="form-control" id="user">
+                        <input type="text" name="username" value="${employee.username}" class="form-control" id="user">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-warning btn-outline-success">Save</button>
@@ -136,7 +151,6 @@
         </center>
     </div>
 </div>
-
 <%@include file="/template/footer.jsp" %>
 </body>
 </html>
