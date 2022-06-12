@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customer")
 public class CustomerServlet extends HttpServlet {
@@ -94,7 +95,7 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         boolean flag = customerService.deleteCustomer(id);
         if (flag) {
-            request.setAttribute("message", "User was Deleted");
+            request.setAttribute("message", "Customer was Deleted");
         } else {
             request.setAttribute("message", "Unsuccessful");
         }
@@ -128,11 +129,12 @@ public class CustomerServlet extends HttpServlet {
         List<CustomerType> customerTypeList = customerTypeService.selectAllCustomerType();
         request.setAttribute("customerTypeList",customerTypeList);
         Customer customer = new Customer(type, name, birthday, gender, idCard, phone, email, address);
-        boolean check = customerService.insertCustomer(customer);
-        if (check) {
-            request.setAttribute("message", "User was Added");
+        Map<String, String> error = customerService.insertCustomer(customer);
+        if (error.isEmpty()) {
+            request.setAttribute("message", "Customer was Added");
         } else {
             request.setAttribute("message", "Unsuccessful");
+            request.setAttribute("error", error);
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/create.jsp");
         dispatcher.forward(request, response);
@@ -161,11 +163,16 @@ public class CustomerServlet extends HttpServlet {
         String address = request.getParameter("address");
 
         Customer customer = new Customer(id,type, name, birthday, gender, idCard, phone, email, address);
-        boolean check = customerService.updateCustomer(customer);
-        if (check) {
-            request.setAttribute("message", "User was updated");
+        Map<String, String> error = customerService.updateCustomer(customer);
+        if (error.isEmpty()) {
+            request.setAttribute("message", "Customer was updated");
         } else {
+            List<CustomerType> customerTypeList = customerTypeService.selectAllCustomerType();
+            request.setAttribute("customer", customer);
+            request.setAttribute("customerTypeList", customerTypeList);
             request.setAttribute("message", "Unsuccessful");
+            request.setAttribute("error", error);
+            request.setAttribute("customer", customer);
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/edit.jsp");
         dispatcher.forward(request, response);

@@ -38,19 +38,22 @@
                     <div class="form-group col-md-6">
                         <label for="idCard">Id Card</label>
                         <input type="text" name="idCard" value="${customer.customerIdCard}" class="form-control"
-                               id="idCard">
+                               id="idCard" aria-describedby="idHelp">
+                        <small id="idHelp" class="form-text text-muted"><p class="text-danger">${error.get("idCard")}</p></small>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="phone">Phone</label>
                         <input type="text" name="phone" value="${customer.customerPhone}" class="form-control"
-                               id="phone">
+                               id="phone" aria-describedby="phoneHelp">
+                        <small id="phoneHel" class="form-text text-muted"><p class="text-danger">${error.get("phone")}</p></small>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="email">Email</label>
                         <input type="text" name="email" value="${customer.customerEmail}" class="form-control"
-                               id="email">
+                               id="email" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted"><p class="text-danger">${error.get("email")}</p></small>
                     </div>
                 </div>
                 <div class="form-group">
@@ -62,19 +65,20 @@
                     <div class="form-group col-md-5">
                         <label for="birthday">Birthday</label>
                         <input type="date" name="birthday" value="${customer.customerBirthday}" class="form-control"
-                               id="birthday">
+                               id="birthday" aria-describedby="dateHelp">
+                        <small id="dateHelp" class="form-text text-muted"><p class="text-danger">${error.get("date")}</p></small>
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="type">Type</label>
                         <select id="type" name="type" class="form-control">
-                            <c:forEach items="${customerTypeList}" var="position">
-                                <c:if test="${position.customerTypeId==customer.customerTypeId}">
-                                    <option value="${position.customerTypeId}">${position.customerTypeName} </option>
+                            <c:forEach items="${customerTypeList}" var="employee">
+                                <c:if test="${employee.customerTypeId==customer.customerTypeId}">
+                                    <option value="${employee.customerTypeId}">${employee.customerTypeName} </option>
                                 </c:if>
                             </c:forEach>
-                            <c:forEach items="${customerTypeList}" var="position">
-                                <option value="${position.customerTypeId}">${position.customerTypeName}</option>
+                            <c:forEach items="${customerTypeList}" var="employee">
+                                <option value="${employee.customerTypeId}">${employee.customerTypeName}</option>
                             </c:forEach>
                         </select>
                     </div>

@@ -36,8 +36,8 @@
             <label for="type"></label>
             <select id="rentType" name="positionSearch" class="form-control mr-sm-2">
                 <option value="">Choose position</option>
-                <c:forEach items="${positionList}" var="position">
-                    <option value="${position.positionId}">${position.positionName}</option>
+                <c:forEach items="${positionList}" var="employee">
+                    <option value="${employee.positionId}">${employee.positionName}</option>
                 </c:forEach>
             </select>
             <select id="type" name="divisionSearch" class="form-control mr-sm-2">
@@ -83,40 +83,40 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${employeeList}" var="employee" varStatus="status">
+                <c:forEach items="${employeeList}" var="contract" varStatus="status">
                     <tr class="text-left align-text-bottom">
-                        <td>${employee.employeeId}</td>
-                        <td>${employee.employeeName}</td>
-                        <td>${employee.employeeBirthday}</td>
-                        <td>${employee.employeeIdCard}</td>
-                        <td>${employee.employeeSalary}</td>
-                        <td>${employee.employeePhone}</td>
+                        <td>${contract.employeeId}</td>
+                        <td>${contract.employeeName}</td>
+                        <td>${contract.employeeBirthday}</td>
+                        <td>${contract.employeeIdCard}</td>
+                        <td>${contract.employeeSalary}</td>
+                        <td>${contract.employeePhone}</td>
                             <%--                        <td>${employee.employeeEmail}</td>--%>
                             <%--                        <td>${employee.employeeAddress}</td>--%>
-                        <c:forEach items="${positionList}" var="position">
-                            <c:if test="${employee.positionId==position.positionId}">
-                                <td>${position.positionName}</td>
+                        <c:forEach items="${positionList}" var="employee">
+                            <c:if test="${contract.positionId==employee.positionId}">
+                                <td>${employee.positionName}</td>
                             </c:if>
                         </c:forEach>
                         <c:forEach items="${educationDegreeList}" var="education">
-                            <c:if test="${employee.educationDegreeId==education.educationDegreeId}">
+                            <c:if test="${contract.educationDegreeId==education.educationDegreeId}">
                                 <td>${education.educationDegreeName}</td>
                             </c:if>
                         </c:forEach>
                         <c:forEach items="${divisionList}" var="division">
-                            <c:if test="${employee.divisionId==division.divisionId}">
+                            <c:if test="${contract.divisionId==division.divisionId}">
                                 <td>${division.divisionName}</td>
                             </c:if>
                         </c:forEach>
-                        <td>${employee.username}</td>
+                        <td>${contract.username}</td>
                         <td class="mr-0">
-                            <a href="/employee?action=edit&id=${employee.employeeId}">
+                            <a href="/employee?action=edit&id=${contract.employeeId}">
                                 <button type="button" class="btn text-light btn-success btn-outline-secondary">edit
                                 </button>
                             </a>
 
                             <button type="button"
-                                    onclick="showInfo('${employee.employeeId}','${employee.employeeName}')"
+                                    onclick="showInfo('${contract.employeeId}','${contract.employeeName}')"
                                     class="btn btn-success text-light btn-outline-dark"
                                     data-toggle="modal"
                                     data-target="#exampleModal">
@@ -134,8 +134,10 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <%--            **********Thêm thẻ form **************--%>
-        <form action="customer">
+
+        <%--            ********************Thêm thẻ form *************************--%>
+
+        <form action="employee">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>

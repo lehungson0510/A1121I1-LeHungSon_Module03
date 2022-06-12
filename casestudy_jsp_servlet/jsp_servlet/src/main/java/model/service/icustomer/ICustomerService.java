@@ -4,15 +4,16 @@ import model.bean.Customer;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 public interface ICustomerService {
     List<Customer> selectAllCustomer();
 
-    public boolean insertCustomer(Customer customer) throws SQLException;
+    public Map<String, String> insertCustomer(Customer customer) throws SQLException;
 
     public Customer selectCustomer(int id);
 
-    public boolean updateCustomer(Customer customer) throws SQLException;
+    public Map<String, String> updateCustomer(Customer customer) throws SQLException;
 
     public boolean deleteCustomer(int id) throws SQLException;
 

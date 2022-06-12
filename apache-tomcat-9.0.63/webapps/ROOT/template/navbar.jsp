@@ -28,8 +28,8 @@
             <label for="type"></label>
             <select id="type" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose...</option>
-                <c:forEach items="${customerTypeList}" var="position">
-                    <option value="${position.customerTypeId}">${position.customerTypeName}</option>
+                <c:forEach items="${customerTypeList}" var="employee">
+                    <option value="${employee.customerTypeId}">${employee.customerTypeName}</option>
                 </c:forEach>
             </select>
             <input style="width: 140px" class="form-control mr-sm-2 " type="search" name="nameSearch"

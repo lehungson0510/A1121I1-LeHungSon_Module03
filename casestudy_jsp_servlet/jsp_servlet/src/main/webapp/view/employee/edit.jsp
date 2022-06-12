@@ -37,8 +37,8 @@
             <label for="nameSearch"></label>
             <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose position</option>
-                <c:forEach items="${positionList}" var="position">
-                    <option value="${position.positionId}">${position.positionName}</option>
+                <c:forEach items="${positionList}" var="employee">
+                    <option value="${employee.positionId}">${employee.positionName}</option>
                 </c:forEach>
             </select>
             <select id="typeSearch" name="typeSearch" class="form-control mr-sm-2">
@@ -75,13 +75,13 @@
                     <div class="form-group col-md-2">
                         <label for="position">Position</label>
                         <select id="position" name="position" class="form-control">
-                            <c:forEach items="${positionList}" var="position">
-                                <c:if test="${position.positionId == employee.positionId}">
-                                    <option value="${position.positionId}">${position.positionName}</option>
+                            <c:forEach items="${positionList}" var="employee">
+                                <c:if test="${employee.positionId == employee.positionId}">
+                                    <option value="${employee.positionId}">${employee.positionName}</option>
                                 </c:if>
                             </c:forEach>
-                            <c:forEach items="${positionList}" var="position">
-                                <option value="${position.positionId}">${position.positionName}</option>
+                            <c:forEach items="${positionList}" var="employee">
+                                <option value="${employee.positionId}">${employee.positionName}</option>
                             </c:forEach>
                         </select>
                     </div>
@@ -115,15 +115,18 @@
                 <div class="form-row my-4">
                     <div class="form-group col-md-4">
                         <label for="birthday">Birthday</label>
-                        <input type="date" name="birthday" value="${employee.employeeBirthday}" class="form-control" id="birthday">
+                        <input type="date" name="birthday" value="${employee.employeeBirthday}" class="form-control" id="birthday" aria-describedby="birthdayHelp">
+                        <small id="birthdayHelp" class="form-text text-muted"><p class="text-danger">${error.get("birthday")}</p></small>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="idCard">ID Card</label>
-                        <input type="text" name="idCard" value="${employee.employeeIdCard}" class="form-control" id="idCard">
+                        <input type="text" name="idCard" value="${employee.employeeIdCard}" class="form-control" id="idCard" aria-describedby="idCardHelp">
+                        <small id="idCardHelp" class="form-text text-muted"><p class="text-danger">${error.get("idCard")}</p></small>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="salary">Salary</label>
-                        <input type="text" name="salary" value="${employee.employeeSalary}" class="form-control" id="salary">
+                        <input type="text" name="salary" value="${employee.employeeSalary}" class="form-control" id="salary" aria-describedby="salaryHelp">
+                        <small id="salaryHelp" class="form-text text-muted"><p class="text-danger">${error.get("salary")}</p></small>
                     </div>
                 </div>
                 <div class="form-row my-4">
@@ -135,11 +138,13 @@
                 <div class="form-row my-4">
                     <div class="form-group col-md-4">
                         <label for="phone">Phone</label>
-                        <input type="text" name="phone" value="${employee.employeePhone}" class="form-control" id="phone">
+                        <input type="text" name="phone" value="${employee.employeePhone}" class="form-control" id="phone" aria-describedby="phoneHelp">
+                        <small id="phoneHelp" class="form-text text-muted"><p class="text-danger">${error.get("phone")}</p></small>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="email">Email</label>
-                        <input type="text" name="email" value="${employee.employeeEmail}" class="form-control" id="email">
+                        <input type="text" name="email" value="${employee.employeeEmail}" class="form-control" id="email" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted"><p class="text-danger">${error.get("email")}</p></small>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="user">User</label>

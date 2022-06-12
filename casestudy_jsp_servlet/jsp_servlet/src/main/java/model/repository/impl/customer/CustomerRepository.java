@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class CustomerRepository implements ICustomerRepository {
     private static final String SELECT_ALL_CUSTOMER = "select * from customer";

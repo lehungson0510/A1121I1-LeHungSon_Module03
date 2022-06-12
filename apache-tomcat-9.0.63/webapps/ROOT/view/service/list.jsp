@@ -35,14 +35,14 @@
             <label for="type"></label>
             <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Rent Type</option>
-                <c:forEach items="${rentTypeList}" var="position">
-                    <option value="${position.rentTypeId}">${position.rentTypeName}</option>
+                <c:forEach items="${rentTypeList}" var="employee">
+                    <option value="${employee.rentTypeId}">${employee.rentTypeName}</option>
                 </c:forEach>
             </select>
             <select id="type" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Type</option>
-                <c:forEach items="${serviceTypeList}" var="position">
-                    <option value="${position.serviceTypeId}">${position.serviceTypeName}</option>
+                <c:forEach items="${serviceTypeList}" var="employee">
+                    <option value="${employee.serviceTypeId}">${employee.serviceTypeName}</option>
                 </c:forEach>
             </select>
             <label for="rentType"></label>
@@ -82,34 +82,34 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${serviceList}" var="employee" varStatus="status">
+                <c:forEach items="${serviceList}" var="contract" varStatus="status">
                     <tr class="text-left align-text-bottom">
-                        <td class="text-left align-text-bottom">${employee.serviceId}</td>
-                        <td>${employee.serviceName}</td>
-                        <td>${employee.serviceArea}</td>
-                        <td>${employee.serviceCost}</td>
-                        <td>${employee.serviceMaxPeople}</td>
-                        <c:forEach items="${rentTypeList}" var="position">
-                            <c:if test="${employee.rentTypeId==position.rentTypeId}">
-                                <td>${position.rentTypeName}</td>
+                        <td class="text-left align-text-bottom">${contract.serviceId}</td>
+                        <td>${contract.serviceName}</td>
+                        <td>${contract.serviceArea}</td>
+                        <td>${contract.serviceCost}</td>
+                        <td>${contract.serviceMaxPeople}</td>
+                        <c:forEach items="${rentTypeList}" var="employee">
+                            <c:if test="${contract.rentTypeId==employee.rentTypeId}">
+                                <td>${employee.rentTypeName}</td>
                             </c:if>
                         </c:forEach>
-                        <c:forEach items="${serviceTypeList}" var="position">
-                            <c:if test="${employee.serviceTypeId==position.serviceTypeId}">
-                                <td>${position.serviceTypeName}</td>
+                        <c:forEach items="${serviceTypeList}" var="employee">
+                            <c:if test="${contract.serviceTypeId==employee.serviceTypeId}">
+                                <td>${employee.serviceTypeName}</td>
                             </c:if>
                         </c:forEach>
-                        <td>${employee.standardRoom}</td>
-                        <td>${employee.descriptionOtherConvenience}</td>
-                        <td>${employee.poolArea}</td>
-                        <td>${employee.numberOfFloors}</td>
+                        <td>${contract.standardRoom}</td>
+                        <td>${contract.descriptionOtherConvenience}</td>
+                        <td>${contract.poolArea}</td>
+                        <td>${contract.numberOfFloors}</td>
                         <td>
-                            <a href="/customer?action=edit&id=${employee.serviceId}">
+                            <a href="/customer?action=edit&id=${contract.serviceId}">
                                 <button type="button" class="btn text-light btn-success btn-outline-secondary">edit
                                 </button>
                             </a>
                             <button type="button"
-                                    onclick="showInfo('${employee.serviceId}','${employee.serviceName}')"
+                                    onclick="showInfo('${contract.serviceId}','${contract.serviceName}')"
                                     class="btn btn-success text-light btn-outline-dark"
                                     data-toggle="modal"
                                     data-target="#exampleModal">

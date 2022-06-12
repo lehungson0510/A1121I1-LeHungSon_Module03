@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "ServiceServlet", urlPatterns = "/service")
 public class ServiceServlet extends HttpServlet {
@@ -113,11 +114,12 @@ public class ServiceServlet extends HttpServlet {
         request.setAttribute("serviceTypeList", serviceTypeList);
         request.setAttribute("rentTypeList", rentTypeList);
         Service service = new Service(name, area, cost, maxPeople, rentTypeId, serviceType, standardRoom, descriptionOtherConvenience, poolArea, numberOfFloors);
-        boolean check = serviceService.insertService(service);
-        if (check) {
-            request.setAttribute("message", "User was Added");
+        Map<String, String> error = serviceService.insertService(service);
+        if (error.isEmpty()) {
+            request.setAttribute("message", "Service was Added");
         } else {
             request.setAttribute("message", "Unsuccessful");
+            request.setAttribute("error", error);
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/service/create.jsp");
         dispatcher.forward(request, response);

@@ -1,10 +1,10 @@
 package model.repository.iemployee;
 
-import model.bean.Customer;
 import model.bean.Employee;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 public interface IEmployeeRepository {
     List<Employee> selectAllEmployee();

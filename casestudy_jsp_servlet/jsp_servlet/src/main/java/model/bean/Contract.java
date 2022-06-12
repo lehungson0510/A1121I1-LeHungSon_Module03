@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class Contract {
     private int contractId;
-    private Date contractStartDate;
-    private Date contractEndDate;
+    private String contractStartDate;
+    private String contractEndDate;
     private double contractDeposit;
     private double contractTotalMoney;
     private int employeeId;
@@ -14,7 +14,7 @@ public class Contract {
 
     public Contract(){};
 
-    public Contract(int contractId, Date contractStartDate, Date contractEndDate, double contractDeposit, double contractTotalMoney, int employeeId, int customerId, int serviceId) {
+    public Contract(int contractId, String contractStartDate, String contractEndDate, double contractDeposit, double contractTotalMoney, int employeeId, int customerId, int serviceId) {
         this.contractId = contractId;
         this.contractStartDate = contractStartDate;
         this.contractEndDate = contractEndDate;
@@ -25,7 +25,7 @@ public class Contract {
         this.serviceId = serviceId;
     }
 
-    public Contract(Date contractStartDate, Date contractEndDate, double contractDeposit, double contractTotalMoney, int employeeId, int customerId, int serviceId) {
+    public Contract(String contractStartDate, String contractEndDate, double contractDeposit, double contractTotalMoney, int employeeId, int customerId, int serviceId) {
         this.contractStartDate = contractStartDate;
         this.contractEndDate = contractEndDate;
         this.contractDeposit = contractDeposit;
@@ -43,19 +43,19 @@ public class Contract {
         this.contractId = contractId;
     }
 
-    public Date getContractStartDate() {
+    public String getContractStartDate() {
         return contractStartDate;
     }
 
-    public void setContractStartDate(Date contractStartDate) {
+    public void setContractStartDate(String contractStartDate) {
         this.contractStartDate = contractStartDate;
     }
 
-    public Date getContractEndDate() {
+    public String getContractEndDate() {
         return contractEndDate;
     }
 
-    public void setContractEndDate(Date contractEndDate) {
+    public void setContractEndDate(String contractEndDate) {
         this.contractEndDate = contractEndDate;
     }
 

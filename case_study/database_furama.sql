@@ -1,6 +1,8 @@
 create database if not exists furama2;
+ SET FOREIGN_KEY_CHECKS = 0;
+ SET SQL_SAFE_UPDATES = 0;
 
-.
+-- .
  use furama2;
 -- drop database furama2;
 
@@ -67,17 +69,19 @@ foreign key(education_degree_id) references education_degree(education_degree_id
 foreign key(division_id) references division(division_id),
 foreign key(username) references `user`(username)
 );
+-- insert into employee(employee_name,employee_birthday,employee_id_card,employee_salary,employee_phone,employee_email,employee_address,position_id,education_degree_id,division_id,username) values ("Lê Hùng Sơn", "2000-10-05","456231786",10000000,"0901234121","annguyen@gmail.com","295 Nguyễn Tất Thành, Đà Nẵng", 1, 3, 1,"Sơn2");
+-- update employee set employee_name = "Sơn", employee_birthday = "1970-11-07", employee_id_card = "123", employee_salary = 500000, employee_phone = "1000", employee_email = "son@", employee_address = "hue", position_id = 1,education_degree_id = 2,division_id = 2,username = "Thắng"  where employee_id = 1;
 insert into employee(employee_name,employee_birthday,employee_id_card,employee_salary,employee_phone,employee_email,employee_address,position_id,education_degree_id,division_id,username) values
 ("Nguyễn Văn An", "1970-11-07","456231786",10000000,"0901234121","annguyen@gmail.com","295 Nguyễn Tất Thành, Đà Nẵng", 1, 3, 1,"Sơn"),
-("Lê Văn Bình", "1997-04-09", "654231234", 7000000, "0934212314", "binhlv@gmail.com", "22 Yên Bái, Đà Nẵng",1,2,2,"Huy"),
-("Hồ Thị Yến","1995-12-12","999231723",14000000,"0412352315","thiyen@gmail.com","K234/11 Điện Biên Phủ, Gia Lai",1,3,2,"Thành"),
-("Võ Công Toản","1980-04-04","123231365",17000000,"0374443232","toan0404@gmail.com","77 Hoàng Diệu, Quảng Trị",1,4,4,"Thắng"),
+("Lê Văn Bình", "1997-04-09", "654231234", 7000000, "0934212314", "binhlv@gmail.com", "22 Yên Bái, Đà Nẵng",3,2,2,"Huy"),
+("Hồ Thị Yến","1995-12-12","999231723",14000000,"0412352315","thiyen@gmail.com","K234/11 Điện Biên Phủ, Gia Lai",4,3,2,"Thành"),
+("Võ Công Toản","1980-04-04","123231365",17000000,"0374443232","toan0404@gmail.com","77 Hoàng Diệu, Quảng Trị",2,4,4,"Thắng"),
 ("Nguyễn Bỉnh Phát","1999-12-09","454363232",6000000,"0902341231","phatphat@gmail.com","43 Yên Bái, Đà Nẵng",2,1,1,"Sơn"),
-("Khúc Nguyễn An Nghi","2000-11-08","964542311",7000000,"0978653213","annghi20@gmail.com","294 Nguyễn Tất Thành, Đà Nẵng",2,2,3,"Sơn"),
-("Nguyễn Hữu Hà","1993-01-01","534323231",8000000,"0941234553","nhh0101@gmail.com","4 Nguyễn Chí Thanh, Huế",2,3,2,"Sơn"),
-("Nguyễn Hà Đông","1989-09-03","234414123",9000000,"0642123111","donghanguyen@gmail.com","111 Hùng Vương, Hà Nội",2,4,4,"Huy"),
-("Tòng Hoang","1982-09-03","256781231",6000000,"0245144444","hoangtong@gmail.com","213 Hàm Nghi, Đà Nẵng",2,4,4,"Sơn"),
-("Nguyễn Công Đạo","1994-01-08","755434343",8000000,"0988767111","nguyencongdao12@gmail.com","6 Hoà Khánh, Đồng Nai",2,3,2,"Trường");
+("Khúc Nguyễn An Nghi","2000-11-08","964542311",7000000,"0978653213","annghi20@gmail.com","294 Nguyễn Tất Thành, Đà Nẵng",3,2,3,"Sơn"),
+("Nguyễn Hữu Hà","1993-01-01","534323231",8000000,"0941234553","nhh0101@gmail.com","4 Nguyễn Chí Thanh, Huế",4,3,2,"Sơn"),
+("Nguyễn Hà Đông","1989-09-03","234414123",9000000,"0642123111","donghanguyen@gmail.com","111 Hùng Vương, Hà Nội",1,4,4,"Huy"),
+("Tòng Hoang","1982-09-03","256781231",6000000,"0245144444","hoangtong@gmail.com","213 Hàm Nghi, Đà Nẵng",4,4,4,"Sơn"),
+("Nguyễn Công Đạo","1994-01-08","755434343",8000000,"0988767111","nguyencongdao12@gmail.com","6 Hoà Khánh, Đồng Nai",3,3,2,"Trường");
 select *from employee;
 
 create table if not exists customer_type(
@@ -131,7 +135,7 @@ select *from rent_type;
 create table if not exists service(
 service_id int primary key auto_increment,
 service_name varchar(45) not null,
-service_area int,
+service_area double,
 service_cost double not null,
 service_max_people int,
 rent_type_id int,
@@ -175,11 +179,11 @@ contract_end_date datetime not null,
 contract_deposit double not null,
 contract_total_money double not null,
 employee_id int,
-foreign key(employee_id) references employee(employee_id),
+constraint fk_employee_id foreign key(employee_id) references employee(employee_id)  ON DELETE CASCADE ,
 customer_id int,
-foreign key(customer_id) references customer(customer_id),
+constraint fk_customer_id foreign key(customer_id) references customer(customer_id)  ON DELETE CASCADE ,
 service_id int,
-foreign key(service_id) references service(service_id)
+constraint fk_service_id foreign key(service_id) references service(service_id)  ON DELETE CASCADE 
 );
 insert into contract(contract_start_date,contract_end_date,contract_deposit,contract_total_money,employee_id,customer_id,service_id) values
 ("2020-12-08","2020-12-08",0,100,3,1,3),
@@ -196,12 +200,14 @@ insert into contract(contract_start_date,contract_end_date,contract_deposit,cont
 ("2021-05-25","2021-05-27",0,300,7,10,1);
 select *from contract;
 
+
+
 create table if not exists contract_detail(
 contract_detail_id int primary key auto_increment,
 contract_id int,
-foreign key(contract_id) references contract(contract_id),
+constraint fk_contract_id foreign key(contract_id) references contract(contract_id)  ON DELETE CASCADE ,
 attach_service_id int,
-foreign key(attach_service_id) references attach_service(attach_service_id),
+constraint fk_attach_service_id foreign key(attach_service_id) references attach_service(attach_service_id)  ON DELETE CASCADE ,
 quantity int not null
 );
 insert into contract_detail(contract_id,attach_service_id,quantity) values
@@ -215,9 +221,34 @@ insert into contract_detail(contract_id,attach_service_id,quantity) values
 (12,2,2);
 select *from contract_detail;
 
+select * from customer_type;
 
+drop trigger if exists  auto_before_create;
+delimiter $$
+create trigger auto_before_create 
+before insert on employee
+for each row
+begin
+if new.username not in (select username from `user`) then
+insert into `user` values(new.username,'123');
+end if;
+end $$
+delimiter ;
 
+drop trigger if exists  auto_update_user;
+delimiter $$
+create trigger auto_update_user 
+before update on employee
+for each row
+begin
+--  ----------------Để không bị trùng lại primary key bảng user-------------------
+if new.username not in (select username from `user`) then
+insert into `user` values(new.username,'123');
+end if;
+end $$
+delimiter ;
 
+select * from contract;
+-- update customer set customer_type_id = 5, customer_name  = "1", customer_birthday = "2000-10-05", customer_gender = 1, customer_id_card = "111",customer_phone = "111", customer_email = "111", customer_address = "111" where customer_id = 1;
 
-
-
+select * from customer where customer_name like "%%" and customer_address like "%%" and customer_type_id like "%%";

@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "EmployeeServlet", urlPatterns = "/employee")
 public class EmployeeServlet extends HttpServlet {
@@ -39,25 +40,29 @@ public class EmployeeServlet extends HttpServlet {
         if (action == null) {
             action = "";
         }
-        switch (action) {
-            case "create":
-                showNewForm(request, response);
-                break;
-            case "edit":
-                showEditForm(request, response);
-                break;
-            case "delete":
-                deleteEmployee(request, response);
-                break;
-            case "search":
-                searchEmployee(request, response);
-                break;
-            case "sort":
-                listEmployeeSorted(request, response);
-                break;
-            default:
-                listEmployee(request, response);
-                break;
+        try {
+            switch (action) {
+                case "create":
+                    showNewForm(request, response);
+                    break;
+                case "edit":
+                    showEditForm(request, response);
+                    break;
+                case "delete":
+                    deleteEmployee(request, response);
+                    break;
+                case "search":
+                    searchEmployee(request, response);
+                    break;
+                case "sort":
+                    listEmployeeSorted(request, response);
+                    break;
+                default:
+                    listEmployee(request, response);
+                    break;
+            }
+        } catch (SQLException ex) {
+            throw new ServletException(ex);
         }
     }
 
@@ -124,11 +129,14 @@ public class EmployeeServlet extends HttpServlet {
         request.setAttribute("positionList", positionList);
         request.setAttribute("educationDegreeList", educationDegreeList);
         request.setAttribute("divisionList", divisionList);
-        boolean check = employeeService.insertEmployee(employee);
-        if (check) {
-            request.setAttribute("message", "User was Added");
+        Map<String, String> error = employeeService.insertEmployee(employee);
+        if (error.isEmpty()) {
+            request.setAttribute("message", "Employee was Added");
         } else {
+
             request.setAttribute("message", "Unsuccessful");
+            request.setAttribute("error", error);
+
         }
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/employee/create.jsp");
         dispatcher.forward(request, response);
@@ -156,15 +164,16 @@ public class EmployeeServlet extends HttpServlet {
         request.setAttribute("positionList", positionList);
         request.setAttribute("educationDegreeList", educationDegreeList);
         request.setAttribute("divisionList", divisionList);
-        boolean check = employeeService.updateEmployee(employee);
-        List<Employee> employeeList = employeeService.selectAllEmployee();
-        request.setAttribute("employeeList", employeeList);
-        if (check) {
-            request.setAttribute("message", "User was Edited");
+        Map<String, String> error = employeeService.updateEmployee(employee);
+        if (error.isEmpty()) {
+            request.setAttribute("message", "Employee was Edited");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("view/employee/list.jsp");
         } else {
             request.setAttribute("message", "Unsuccessful");
+            request.setAttribute("error", error);
+            request.setAttribute("employee", employee);
         }
-        RequestDispatcher dispatcher = request.getRequestDispatcher("view/employee/list.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/employee/edit.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -204,10 +213,27 @@ public class EmployeeServlet extends HttpServlet {
         request.setAttribute("educationDegreeList", educationDegreeList);
         request.setAttribute("divisionList", divisionList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/view/employee/edit.jsp");
-        dispatcher.forward(request,response);
+        dispatcher.forward(request, response);
     }
 
-    private void deleteEmployee(HttpServletRequest request, HttpServletResponse response) {
+    private void deleteEmployee(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        boolean flag = employeeService.deleteEmployee(id);
+        if (flag) {
+            request.setAttribute("message", "Employee was Deleted");
+        } else {
+            request.setAttribute("message", "Unsuccessful");
+        }
+        List<Employee> employeeList = employeeService.selectAllEmployee();
+        List<Position> positionList = positionService.selectAllPosition();
+        List<EducationDegree> educationDegreeList = educationDegreeService.selectAllEducationDegree();
+        List<Division> divisionList = divisionService.selectAllDivision();
+        request.setAttribute("employeeList", employeeList);
+        request.setAttribute("positionList", positionList);
+        request.setAttribute("educationDegreeList", educationDegreeList);
+        request.setAttribute("divisionList", divisionList);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/employee/list.jsp");
+        dispatcher.forward(request, response);
     }
 
     private void listEmployeeSorted(HttpServletRequest request, HttpServletResponse response) {

@@ -37,14 +37,14 @@
             <label for="type"></label>
             <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Rent Type</option>
-                <c:forEach items="${rentTypeList}" var="position">
-                    <option value="${position.rentTypeId}">${position.rentTypeName}</option>
+                <c:forEach items="${rentTypeList}" var="employee">
+                    <option value="${employee.rentTypeId}">${employee.rentTypeName}</option>
                 </c:forEach>
             </select>
             <select id="typeSearch" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Type</option>
-                <c:forEach items="${serviceTypeList}" var="position">
-                    <option value="${position.serviceTypeId}">${position.serviceTypeName}</option>
+                <c:forEach items="${serviceTypeList}" var="employee">
+                    <option value="${employee.serviceTypeId}">${employee.serviceTypeName}</option>
                 </c:forEach>
             </select>
             <label for="rentType"></label>
@@ -73,8 +73,8 @@
                         <label for="type">Type</label>
                         <select id="type" name="type" class="form-control">
                             <option>Choose...</option>
-                            <c:forEach items="${serviceTypeList}" var="position">
-                                <option value="${position.serviceTypeId}">${position.serviceTypeName}</option>
+                            <c:forEach items="${serviceTypeList}" var="employee">
+                                <option value="${employee.serviceTypeId}">${employee.serviceTypeName}</option>
                             </c:forEach>
                         </select>
                     </div>
@@ -82,8 +82,8 @@
                         <label for="rent">Rent Type</label>
                         <select id="rent" name="rentType" class="form-control">
                             <option>Choose...</option>
-                            <c:forEach items="${rentTypeList}" var="position">
-                                <option value="${position.rentTypeId}">${position.rentTypeName}</option>
+                            <c:forEach items="${rentTypeList}" var="employee">
+                                <option value="${employee.rentTypeId}">${employee.rentTypeName}</option>
                             </c:forEach>
                         </select>
                     </div>
@@ -95,7 +95,8 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="floors">Floors</label>
-                        <input type="text" name="numOfFloors" class="form-control" id="floors">
+                        <input type="text" name="numOfFloors" class="form-control" id="floors" aria-describedby="floorsHelp">
+                        <small id="floorsHelp" class="form-text text-muted"><p class="text-danger">${error.get("floors")}</p></small>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="maxPeople">Max people</label>
@@ -115,7 +116,8 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="cost">Cost</label>
-                        <input type="text" name="cost" class="form-control" id="cost">
+                        <input type="text" name="cost" class="form-control" id="cost" aria-describedby="costHelp">
+                        <small id="costHelp" class="form-text text-muted"><p class="text-danger">${error.get("cost")}</p></small>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="pool">Pool area</label>

@@ -1,6 +1,5 @@
 package model.repository.impl.employee;
 
-import model.bean.Customer;
 import model.bean.Employee;
 import model.repository.BaseRepository;
 import model.repository.iemployee.IEmployeeRepository;
@@ -11,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class EmployeeRepository implements IEmployeeRepository {
     private static final String SELECT_ALL_EMPLOYEE = "select * from employee";
@@ -129,7 +129,13 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public boolean deleteEmployee(int id) throws SQLException {
-        return false;
+        boolean rowDeleted;
+        try (Connection connection = BaseRepository.getConnect();
+             PreparedStatement statement = connection.prepareStatement(DELETE_EMPLOYEE);) {
+            statement.setInt(1, id);
+            rowDeleted = statement.executeUpdate() > 0;
+        }
+        return rowDeleted;
     }
 
     @Override
