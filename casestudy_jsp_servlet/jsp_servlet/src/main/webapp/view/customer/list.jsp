@@ -38,41 +38,41 @@
                     <th scope="col">Email</th>
                     <th scope="col">Address</th>
                     <th scope="col"></th>
-                    <th scope="col"><a  href="/customer?action=create">
+                    <th scope="col"><a href="/customer?action=create">
                         <button type="button" class="btn btn-warning btn-outline-secondary">Create</button>
                     </a></th>
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${customerList}" var="contract" varStatus="status">
+                <c:forEach items="${customerList}" var="customer" varStatus="status">
                     <tr class="text-left align-text-bottom">
-                        <td class="text-left align-text-bottom">${contract.customerId}</td>
-                        <td>${contract.customerName}</td>
-                        <c:forEach items="${customerTypeList}" var="employee">
-                            <c:if test="${contract.customerTypeId==employee.customerTypeId}">
-                                <td>${employee.customerTypeName}</td>
+                        <td class="text-left align-text-bottom">${customer.customerId}</td>
+                        <td>${customer.customerName}</td>
+                        <c:forEach items="${customerTypeList}" var="customerType">
+                            <c:if test="${customer.customerTypeId==customerType.customerTypeId}">
+                                <td>${customerType.customerTypeName}</td>
                             </c:if>
                         </c:forEach>
-                        <td>${contract.customerBirthday}</td>
-                        <c:if test="${contract.customerGender==1}">
+                        <td>${customer.customerBirthday}</td>
+                        <c:if test="${customer.customerGender==1}">
                             <td>Nam</td>
                         </c:if>
-                        <c:if test="${contract.customerGender==0}">
+                        <c:if test="${customer.customerGender==0}">
                             <td>Nữ</td>
                         </c:if>
-                        <td>${contract.customerIdCard}</td>
-                        <td>${contract.customerPhone}</td>
-                        <td>${contract.customerEmail}</td>
-                        <td>${contract.customerAddress}</td>
+                        <td>${customer.customerIdCard}</td>
+                        <td>${customer.customerPhone}</td>
+                        <td style="word-break: break-word">${customer.customerEmail}</td>
+                        <td style="word-break: break-word">${customer.customerAddress}</td>
                         <td>
-                            <a href="/customer?action=edit&id=${contract.customerId}">
+                            <a href="/customer?action=edit&id=${customer.customerId}">
                                 <button type="button" class="btn text-light btn-success btn-outline-secondary">edit
                                 </button>
                             </a>
                         </td>
                         <td>
                             <button type="button"
-                                    onclick="showInfo('${contract.customerId}','${contract.customerName}')"
+                                    onclick="showInfo('${customer.customerId}','${customer.customerName}')"
                                     class="btn btn-success text-light btn-outline-dark"
                                     data-toggle="modal"
                                     data-target="#exampleModal">
@@ -132,6 +132,5 @@
         document.getElementById("nameCustomer").innerText = name;
     }
 </script>
-</body>
 </body>
 </html>

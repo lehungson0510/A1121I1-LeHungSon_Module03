@@ -72,13 +72,13 @@
                     <div class="form-group col-md-4">
                         <label for="type">Type</label>
                         <select id="type" name="type" class="form-control">
-                            <c:forEach items="${customerTypeList}" var="employee">
-                                <c:if test="${employee.customerTypeId==customer.customerTypeId}">
-                                    <option value="${employee.customerTypeId}">${employee.customerTypeName} </option>
+                            <c:forEach items="${customerTypeList}" var="contract">
+                                <c:if test="${contract.customerTypeId==customer.customerTypeId}">
+                                    <option value="${contract.customerTypeId}">${contract.customerTypeName} </option>
                                 </c:if>
                             </c:forEach>
-                            <c:forEach items="${customerTypeList}" var="employee">
-                                <option value="${employee.customerTypeId}">${employee.customerTypeName}</option>
+                            <c:forEach items="${customerTypeList}" var="contract">
+                                <option value="${contract.customerTypeId}">${contract.customerTypeName}</option>
                             </c:forEach>
                         </select>
                     </div>

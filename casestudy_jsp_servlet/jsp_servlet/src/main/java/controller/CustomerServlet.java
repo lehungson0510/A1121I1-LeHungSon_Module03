@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -127,7 +128,7 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         List<CustomerType> customerTypeList = customerTypeService.selectAllCustomerType();
-        request.setAttribute("customerTypeList",customerTypeList);
+        request.setAttribute("customerTypeList", customerTypeList);
         Customer customer = new Customer(type, name, birthday, gender, idCard, phone, email, address);
         Map<String, String> error = customerService.insertCustomer(customer);
         if (error.isEmpty()) {
@@ -162,7 +163,7 @@ public class CustomerServlet extends HttpServlet {
         String email = request.getParameter("email");
         String address = request.getParameter("address");
 
-        Customer customer = new Customer(id,type, name, birthday, gender, idCard, phone, email, address);
+        Customer customer = new Customer(id, type, name, birthday, gender, idCard, phone, email, address);
         Map<String, String> error = customerService.updateCustomer(customer);
         if (error.isEmpty()) {
             request.setAttribute("message", "Customer was updated");
@@ -183,13 +184,13 @@ public class CustomerServlet extends HttpServlet {
         String nameSearch = request.getParameter("nameSearch");
         String typeSearch = request.getParameter("typeSearch");
         String addressSearch = request.getParameter("addressSearch");
-        List<Customer> customerList = customerService.search(nameSearch,typeSearch,addressSearch);
+        List<Customer> customerList = customerService.search(nameSearch, typeSearch, addressSearch);
         List<CustomerType> customerTypeList = customerTypeService.selectAllCustomerType();
         request.setAttribute("customerList", customerList);
         request.setAttribute("customerTypeList", customerTypeList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
         try {
-            dispatcher.forward(request,response);
+            dispatcher.forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

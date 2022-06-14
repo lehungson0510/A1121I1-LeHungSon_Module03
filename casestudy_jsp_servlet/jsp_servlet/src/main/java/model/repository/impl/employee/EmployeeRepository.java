@@ -1,5 +1,6 @@
 package model.repository.impl.employee;
 
+import common.Validation;
 import model.bean.Employee;
 import model.repository.BaseRepository;
 import model.repository.iemployee.IEmployeeRepository;
@@ -31,6 +32,7 @@ public class EmployeeRepository implements IEmployeeRepository {
                 int id = rs.getInt("employee_id");
                 String name = rs.getString("employee_name");
                 String birthday = rs.getString("employee_birthday");
+                birthday = Validation.formatDate(birthday);
                 String idCard = rs.getString("employee_id_card");
                 double salary = rs.getDouble("employee_salary");
                 String phone = rs.getString("employee_phone");

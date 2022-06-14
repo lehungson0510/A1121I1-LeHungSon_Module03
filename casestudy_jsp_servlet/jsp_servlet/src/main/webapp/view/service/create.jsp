@@ -37,14 +37,14 @@
             <label for="type"></label>
             <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Rent Type</option>
-                <c:forEach items="${rentTypeList}" var="employee">
-                    <option value="${employee.rentTypeId}">${employee.rentTypeName}</option>
+                <c:forEach items="${rentTypeList}" var="contract">
+                    <option value="${contract.rentTypeId}">${contract.rentTypeName}</option>
                 </c:forEach>
             </select>
             <select id="typeSearch" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Type</option>
-                <c:forEach items="${serviceTypeList}" var="employee">
-                    <option value="${employee.serviceTypeId}">${employee.serviceTypeName}</option>
+                <c:forEach items="${serviceTypeList}" var="contract">
+                    <option value="${contract.serviceTypeId}">${contract.serviceTypeName}</option>
                 </c:forEach>
             </select>
             <label for="rentType"></label>
@@ -73,8 +73,8 @@
                         <label for="type">Type</label>
                         <select id="type" name="type" class="form-control">
                             <option>Choose...</option>
-                            <c:forEach items="${serviceTypeList}" var="employee">
-                                <option value="${employee.serviceTypeId}">${employee.serviceTypeName}</option>
+                            <c:forEach items="${serviceTypeList}" var="contract">
+                                <option value="${contract.serviceTypeId}">${contract.serviceTypeName}</option>
                             </c:forEach>
                         </select>
                     </div>
@@ -82,8 +82,8 @@
                         <label for="rent">Rent Type</label>
                         <select id="rent" name="rentType" class="form-control">
                             <option>Choose...</option>
-                            <c:forEach items="${rentTypeList}" var="employee">
-                                <option value="${employee.rentTypeId}">${employee.rentTypeName}</option>
+                            <c:forEach items="${rentTypeList}" var="contract">
+                                <option value="${contract.rentTypeId}">${contract.rentTypeName}</option>
                             </c:forEach>
                         </select>
                     </div>

@@ -35,14 +35,14 @@
             <label for="type"></label>
             <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Rent Type</option>
-                <c:forEach items="${rentTypeList}" var="employee">
-                    <option value="${employee.rentTypeId}">${employee.rentTypeName}</option>
+                <c:forEach items="${rentTypeList}" var="contract">
+                    <option value="${contract.rentTypeId}">${contract.rentTypeName}</option>
                 </c:forEach>
             </select>
             <select id="type" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose Type</option>
-                <c:forEach items="${serviceTypeList}" var="employee">
-                    <option value="${employee.serviceTypeId}">${employee.serviceTypeName}</option>
+                <c:forEach items="${serviceTypeList}" var="contract">
+                    <option value="${contract.serviceTypeId}">${contract.serviceTypeName}</option>
                 </c:forEach>
             </select>
             <label for="rentType"></label>
@@ -89,14 +89,14 @@
                         <td>${contract.serviceArea}</td>
                         <td>${contract.serviceCost}</td>
                         <td>${contract.serviceMaxPeople}</td>
-                        <c:forEach items="${rentTypeList}" var="employee">
-                            <c:if test="${contract.rentTypeId==employee.rentTypeId}">
-                                <td>${employee.rentTypeName}</td>
+                        <c:forEach items="${rentTypeList}" var="rentType">
+                            <c:if test="${contract.rentTypeId==rentType.rentTypeId}">
+                                <td>${rentType.rentTypeName}</td>
                             </c:if>
                         </c:forEach>
-                        <c:forEach items="${serviceTypeList}" var="employee">
-                            <c:if test="${contract.serviceTypeId==employee.serviceTypeId}">
-                                <td>${employee.serviceTypeName}</td>
+                        <c:forEach items="${serviceTypeList}" var="serviceType">
+                            <c:if test="${contract.serviceTypeId==serviceType.serviceTypeId}">
+                                <td>${serviceType.serviceTypeName}</td>
                             </c:if>
                         </c:forEach>
                         <td>${contract.standardRoom}</td>

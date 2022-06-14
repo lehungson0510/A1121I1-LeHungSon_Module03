@@ -1,5 +1,6 @@
 package model.repository.impl.customer;
 
+import common.Validation;
 import model.bean.Customer;
 import model.repository.BaseRepository;
 import model.repository.icustomer.ICustomerRepository;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 public class CustomerRepository implements ICustomerRepository {
-    private static final String SELECT_ALL_CUSTOMER = "select * from customer";
+    private static final String SELECT_ALL_CUSTOMER = "select * from customer ;";
     private static final String DELETE_CUSTOMER = "delete from customer where customer_id = ?;";
     private static final String INSERT_CUSTOMER_SQL = "insert into customer(customer_type_id,customer_name,customer_birthday,customer_gender,customer_id_card,customer_phone,customer_email,customer_address) values (?,?,?,?,?,?,?,?);";
     private static final String SELECT_CUSTOMER_BY_ID = "select * from customer where customer_id = ?";
@@ -31,6 +32,8 @@ public class CustomerRepository implements ICustomerRepository {
                 int customerTypeId = rs.getInt("customer_type_id");
                 String customerName = rs.getString("customer_name");
                 String customerBirthday = rs.getString("customer_birthday");
+//                ******************** Format Date **************************
+                customerBirthday = Validation.formatDate(customerBirthday);
                 int customerGender = rs.getInt("customer_gender");
                 String customerIdCard = rs.getString("customer_id_card");
                 String customerPhone = rs.getString("customer_phone");

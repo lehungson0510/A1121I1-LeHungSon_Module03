@@ -1,5 +1,6 @@
 package model.repository.impl.contract;
 
+import common.Validation;
 import model.bean.Contract;
 import model.bean.Customer;
 import model.bean.Service;
@@ -28,7 +29,9 @@ public class ContractRepository implements IContractRepository {
             while (rs.next()) {
                 int id = rs.getInt("contract_id");
                 String startDate = rs.getString("contract_start_date");
+                startDate = Validation.formatDateTime(startDate);
                 String endDate = rs.getString("contract_end_date");
+                endDate = Validation.formatDateTime(endDate);
                 double deposit = rs.getDouble("contract_deposit");
                 double totalMoney = rs.getDouble("contract_total_money");
                 int employeeId = rs.getInt("employee_id");

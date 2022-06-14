@@ -38,8 +38,8 @@
             <label for="inputStartDay"></label>
             <select id="rentType" name="positionSearch" class="form-control mr-sm-2">
                 <option value="">Choose Employee</option>
-                <c:forEach items="${positionList}" var="employee">
-                    <option value="${employee.positionId}">${employee.positionName}</option>
+                <c:forEach items="${positionList}" var="contract">
+                    <option value="${contract.positionId}">${contract.positionName}</option>
                 </c:forEach>
             </select>
             <select id="" name="divisionSearch" class="form-control mr-sm-2">
@@ -70,8 +70,8 @@
                         <label for="employee">Employee</label>
                         <select id="employee" name="employee" class="form-control">
                             <option>Choose</option>
-                            <c:forEach items="${employeeList}" var="employee">
-                                <option value="${employee.getEmployeeId()}">${employee.getEmployeeName()}</option>
+                            <c:forEach items="${employeeList}" var="contract">
+                                <option value="${contract.getEmployeeId()}">${contract.getEmployeeName()}</option>
                             </c:forEach>
                         </select>
                     </div>
@@ -88,8 +88,8 @@
                         <label for="service">Service</label>
                         <select id="service" name="service" class="form-control">
                             <option>Choose...</option>
-                            <c:forEach items="${serviceList}" var="service">
-                                <option value="${service.getServiceId()}">${service.getServiceName()}</option>
+                            <c:forEach items="${serviceList}" var="contract">
+                                <option value="${contract.getServiceId()}">${contract.getServiceName()}</option>
                             </c:forEach>
                         </select>
                     </div>

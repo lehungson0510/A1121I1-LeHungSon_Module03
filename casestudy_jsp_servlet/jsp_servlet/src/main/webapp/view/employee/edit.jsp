@@ -37,8 +37,8 @@
             <label for="nameSearch"></label>
             <select id="rentType" name="typeSearch" class="form-control mr-sm-2">
                 <option value="">Choose position</option>
-                <c:forEach items="${positionList}" var="employee">
-                    <option value="${employee.positionId}">${employee.positionName}</option>
+                <c:forEach items="${positionList}" var="contract">
+                    <option value="${contract.positionId}">${contract.positionName}</option>
                 </c:forEach>
             </select>
             <select id="typeSearch" name="typeSearch" class="form-control mr-sm-2">
@@ -75,13 +75,13 @@
                     <div class="form-group col-md-2">
                         <label for="position">Position</label>
                         <select id="position" name="position" class="form-control">
-                            <c:forEach items="${positionList}" var="employee">
-                                <c:if test="${employee.positionId == employee.positionId}">
-                                    <option value="${employee.positionId}">${employee.positionName}</option>
+                            <c:forEach items="${positionList}" var="position">
+                                <c:if test="${position.positionId == employee.positionId}">
+                                    <option value="${position.positionId}">${position.positionName}</option>
                                 </c:if>
                             </c:forEach>
-                            <c:forEach items="${positionList}" var="employee">
-                                <option value="${employee.positionId}">${employee.positionName}</option>
+                            <c:forEach items="${positionList}" var="position">
+                                <option value="${position.positionId}">${position.positionName}</option>
                             </c:forEach>
                         </select>
                     </div>

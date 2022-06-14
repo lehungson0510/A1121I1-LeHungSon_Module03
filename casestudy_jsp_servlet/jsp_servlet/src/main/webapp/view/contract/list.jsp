@@ -36,8 +36,8 @@
             <label for="type"></label>
             <select id="rentType" name="positionSearch" class="form-control mr-sm-2">
                 <option value="">Choose Employee</option>
-                <c:forEach items="${positionList}" var="employee">
-                    <option value="${employee.positionId}">${employee.positionName}</option>
+                <c:forEach items="${positionList}" var="contract">
+                    <option value="${contract.positionId}">${contract.positionName}</option>
                 </c:forEach>
             </select>
             <select id="type" name="divisionSearch" class="form-control mr-sm-2">

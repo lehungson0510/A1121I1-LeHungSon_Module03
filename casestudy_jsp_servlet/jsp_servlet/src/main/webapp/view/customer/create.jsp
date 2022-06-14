@@ -66,8 +66,8 @@
                         <label for="type">Type</label>
                         <select id="type" name="type" class="form-control">
                             <option>Choose...</option>
-                            <c:forEach items="${customerTypeList}" var="employee">
-                                <option value="${employee.customerTypeId}">${employee.customerTypeName}</option>
+                            <c:forEach items="${customerTypeList}" var="contract">
+                                <option value="${contract.customerTypeId}">${contract.customerTypeName}</option>
                             </c:forEach>
                         </select>
                     </div>
