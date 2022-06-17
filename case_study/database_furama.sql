@@ -229,6 +229,7 @@ create trigger auto_before_create
 before insert on employee
 for each row
 begin
+--  ----------------Để không bị trùng lại primary key bảng user-------------------
 if new.username not in (select username from `user`) then
 insert into `user` values(new.username,'123');
 end if;
